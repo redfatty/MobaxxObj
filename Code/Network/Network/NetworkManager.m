@@ -10,6 +10,7 @@
 #import <AFNetworking.h>
 #import <Result.pbobjc.h>
 #import "NetworkHelper.h"
+#import "AFManager.h"
 
 
 @interface NetworkManager ()
@@ -24,11 +25,18 @@
     success:(void (^)(GPBMessage *))success
     failure:(void (^)(NSError *))failure {
     
-    [self.afManager GET:url parameters:params progress:NULL success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        //解析,并回调
-        [self parseResponseData:responseObject callback:success];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        failure(error);//失败
+    [[AFManager sharedManager] GET:url parameters:params progress:NULL success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+       if (success) {
+           GPBMessage *pbObj = [NetworkHelper parsePbOriginalData:responseObject];
+           success(responseObject);
+       }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task,
+                NSError * _Nonnull error) {
+        if (failure) {
+            failure(error);
+        }
     }];
 }
 
@@ -37,33 +45,18 @@
      success:(void (^)(GPBMessage *))success
      failure:(void (^)(NSError *))failure {
     
-    [[self afManager] POST:url parameters:params progress:NULL success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [[AFManager sharedManager] POST:url parameters:params progress:NULL success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        [self parseResponseData:responseObject callback:success];
+        if (success) {
+            GPBMessage *pbObj = [NetworkHelper parsePbOriginalData:responseObject];
+            success(pbObj);
+        }
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        failure(error);
+        if (failure) {
+            failure(error);
+        }
     }];
-}
-
-+ (void)parseResponseData:(NSData *)data callback:(void(^)(GPBMessage *))callback {
-    PMessage *pMsg = [PMessage parseFromData:data error:nil];
-    Class targetClass = NSClassFromString(pMsg.type);
-    GPBMessage *targetObj = [targetClass parseFromData:pMsg.data_p error:nil];
-    callback(targetObj);
-}
-
-+ (AFHTTPSessionManager *)afManager {
-    static AFHTTPSessionManager *afManager = nil;
-    if (afManager == nil) {
-        NSURL *baseURL = [NSURL URLWithString:URL_BASE];
-        afManager = [[AFHTTPSessionManager alloc] initWithBaseURL:baseURL];
-        afManager.requestSerializer = [AFHTTPRequestSerializer serializer];
-        afManager.requestSerializer.timeoutInterval = 15;
-        afManager.responseSerializer = [AFHTTPResponseSerializer serializer];
-        afManager.securityPolicy.allowInvalidCertificates = YES;
-        afManager.securityPolicy.validatesDomainName = NO;
-    }
-    return afManager;
 }
 
 + (BOOL)checkNetwrokReachable {
@@ -77,7 +70,6 @@
         [alertCtrl addAction:[UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleCancel handler:NULL]];
         [ctrl presentViewController:alertCtrl animated:YES completion:NULL];
     }
-    
     return mgr.reachable;
 }
 

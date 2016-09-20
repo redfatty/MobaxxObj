@@ -32,6 +32,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    self.hidesBottomBarWhenPushed = YES;//好像不起作用
 }
 
 - (void)didReceiveMemoryWarning {

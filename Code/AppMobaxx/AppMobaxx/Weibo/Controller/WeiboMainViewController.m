@@ -7,6 +7,7 @@
 //
 
 #import "WeiboMainViewController.h"
+#import <NetworkManager+Login.h>
 
 
 @interface WeiboMainViewController ()
@@ -25,6 +26,22 @@
 
 - (void)gotoLogin {
 
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    [NetworkManager loginWithAccount:@"+8613620946464"
+//                            password:@"1231456"
+//                          completion:^(PResult *failResult,
+//                                       PLogin *plogin) {
+//                              
+//        
+//    } error:^(NSError *err) { }];
+    
+    [NetworkManager requestSmsCodeWithPhone:@"+13620946464" type:2 completion:^(PResult *presult) {
+        
+    } error:^(NSError *err) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

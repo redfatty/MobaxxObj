@@ -14,6 +14,10 @@
 		CEA1E7E11D91546400D4CAED /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E7DF1D91546400D4CAED /* NetworkManager.m */; };
 		CEA1E7E41D91549B00D4CAED /* NetworkHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E7E21D91549B00D4CAED /* NetworkHelper.h */; };
 		CEA1E7E51D91549B00D4CAED /* NetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E7E31D91549B00D4CAED /* NetworkHelper.m */; };
+		CEA1E8D71D91605000D4CAED /* NetworkManager+Login.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E8D51D91605000D4CAED /* NetworkManager+Login.h */; };
+		CEA1E8D81D91605000D4CAED /* NetworkManager+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E8D61D91605000D4CAED /* NetworkManager+Login.m */; };
+		CEA1E8DB1D91685700D4CAED /* AFManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E8D91D91685700D4CAED /* AFManager.h */; };
+		CEA1E8DC1D91685700D4CAED /* AFManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E8DA1D91685700D4CAED /* AFManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		CEA1E7DF1D91546400D4CAED /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		CEA1E7E21D91549B00D4CAED /* NetworkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkHelper.h; sourceTree = "<group>"; };
 		CEA1E7E31D91549B00D4CAED /* NetworkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkHelper.m; sourceTree = "<group>"; };
+		CEA1E8D51D91605000D4CAED /* NetworkManager+Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetworkManager+Login.h"; sourceTree = "<group>"; };
+		CEA1E8D61D91605000D4CAED /* NetworkManager+Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkManager+Login.m"; sourceTree = "<group>"; };
+		CEA1E8D91D91685700D4CAED /* AFManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFManager.h; sourceTree = "<group>"; };
+		CEA1E8DA1D91685700D4CAED /* AFManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFManager.m; sourceTree = "<group>"; };
 		CFAF4D64A19B8B41B8D29232 /* Pods-Network.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Network.release.xcconfig"; path = "../../Pods/Target Support Files/Pods-Network/Pods-Network.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,10 +88,14 @@
 				CEA1E7DD1D91544800D4CAED /* URLDefine.h */,
 				CEA1E7DB1D9153FB00D4CAED /* NetworkConst.h */,
 				CEA1E7DC1D91542F00D4CAED /* NetworkMacro.h */,
+				CEA1E8D91D91685700D4CAED /* AFManager.h */,
+				CEA1E8DA1D91685700D4CAED /* AFManager.m */,
 				CEA1E7E21D91549B00D4CAED /* NetworkHelper.h */,
 				CEA1E7E31D91549B00D4CAED /* NetworkHelper.m */,
 				CEA1E7DE1D91546400D4CAED /* NetworkManager.h */,
 				CEA1E7DF1D91546400D4CAED /* NetworkManager.m */,
+				CEA1E8D51D91605000D4CAED /* NetworkManager+Login.h */,
+				CEA1E8D61D91605000D4CAED /* NetworkManager+Login.m */,
 				CE1C04281D913B600077FAA7 /* Info.plist */,
 			);
 			path = Network;
@@ -106,6 +118,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE1C04291D913B600077FAA7 /* Network.h in Headers */,
+				CEA1E8DB1D91685700D4CAED /* AFManager.h in Headers */,
+				CEA1E8D71D91605000D4CAED /* NetworkManager+Login.h in Headers */,
 				CEA1E7E01D91546400D4CAED /* NetworkManager.h in Headers */,
 				CEA1E7E41D91549B00D4CAED /* NetworkHelper.h in Headers */,
 			);
@@ -214,6 +228,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA1E8DC1D91685700D4CAED /* AFManager.m in Sources */,
+				CEA1E8D81D91605000D4CAED /* NetworkManager+Login.m in Sources */,
 				CEA1E7E51D91549B00D4CAED /* NetworkHelper.m in Sources */,
 				CEA1E7E11D91546400D4CAED /* NetworkManager.m in Sources */,
 			);

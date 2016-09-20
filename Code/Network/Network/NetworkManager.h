@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "URLDefine.h"
+#import "NetworkHelper.h"
+#import "NetworkMacro.h"
 @class GPBMessage;
 
 @interface NetworkManager : NSObject

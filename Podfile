@@ -16,4 +16,5 @@ target 'Base' do
     pod 'AFNetworking'
     pod 'Protobuf', '3.0.0-beta-2'
     pod 'Masonry'
+    pod 'YYKit'
 end
