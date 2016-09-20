@@ -1,6 +1,6 @@
 //
-//  AppMainUITests.m
-//  AppMainUITests
+//  AppMobaxxUITests.m
+//  AppMobaxxUITests
 //
 //  Created by huangJiong on 16/9/20.
 //  Copyright © 2016年 miwu. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface AppMainUITests : XCTestCase
+@interface AppMobaxxUITests : XCTestCase
 
 @end
 
-@implementation AppMainUITests
+@implementation AppMobaxxUITests
 
 - (void)setUp {
     [super setUp];

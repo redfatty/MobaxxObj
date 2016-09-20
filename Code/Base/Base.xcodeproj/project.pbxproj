@@ -7,13 +7,101 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BE4FBF52C540758404803CE /* libPods-Base.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F97B8148C6543486CBF1C1F /* libPods-Base.a */; };
 		CE1C046F1D913C1D0077FAA7 /* Base.h in Headers */ = {isa = PBXBuildFile; fileRef = CE1C046D1D913C1D0077FAA7 /* Base.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEA1E80D1D9154E300D4CAED /* Account.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E7E71D9154E300D4CAED /* Account.pbobjc.h */; };
+		CEA1E80E1D9154E300D4CAED /* Account.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E7E81D9154E300D4CAED /* Account.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CEA1E80F1D9154E300D4CAED /* Chat.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E7E91D9154E300D4CAED /* Chat.pbobjc.h */; };
+		CEA1E8101D9154E300D4CAED /* Chat.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E7EA1D9154E300D4CAED /* Chat.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CEA1E8111D9154E300D4CAED /* Comment.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E7EB1D9154E300D4CAED /* Comment.pbobjc.h */; };
+		CEA1E8121D9154E300D4CAED /* Comment.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E7EC1D9154E300D4CAED /* Comment.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CEA1E8131D9154E300D4CAED /* Community.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E7ED1D9154E300D4CAED /* Community.pbobjc.h */; };
+		CEA1E8141D9154E300D4CAED /* Community.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E7EE1D9154E300D4CAED /* Community.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CEA1E8151D9154E300D4CAED /* Contact.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E7EF1D9154E300D4CAED /* Contact.pbobjc.h */; };
+		CEA1E8161D9154E300D4CAED /* Contact.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E7F01D9154E300D4CAED /* Contact.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CEA1E8171D9154E300D4CAED /* Datapublishing.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E7F11D9154E300D4CAED /* Datapublishing.pbobjc.h */; };
+		CEA1E8181D9154E300D4CAED /* Datapublishing.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E7F21D9154E300D4CAED /* Datapublishing.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CEA1E8191D9154E300D4CAED /* Edge.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E7F31D9154E300D4CAED /* Edge.pbobjc.h */; };
+		CEA1E81A1D9154E300D4CAED /* Edge.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E7F41D9154E300D4CAED /* Edge.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CEA1E81B1D9154E300D4CAED /* Gamification.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E7F51D9154E300D4CAED /* Gamification.pbobjc.h */; };
+		CEA1E81C1D9154E300D4CAED /* Gamification.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E7F61D9154E300D4CAED /* Gamification.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CEA1E81D1D9154E300D4CAED /* Login.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E7F71D9154E300D4CAED /* Login.pbobjc.h */; };
+		CEA1E81E1D9154E300D4CAED /* Login.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E7F81D9154E300D4CAED /* Login.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CEA1E81F1D9154E300D4CAED /* Netdisk.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E7F91D9154E300D4CAED /* Netdisk.pbobjc.h */; };
+		CEA1E8201D9154E300D4CAED /* Netdisk.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E7FA1D9154E300D4CAED /* Netdisk.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CEA1E8211D9154E300D4CAED /* News.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E7FB1D9154E300D4CAED /* News.pbobjc.h */; };
+		CEA1E8221D9154E300D4CAED /* News.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E7FC1D9154E300D4CAED /* News.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CEA1E8231D9154E300D4CAED /* Notification.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E7FD1D9154E300D4CAED /* Notification.pbobjc.h */; };
+		CEA1E8241D9154E300D4CAED /* Notification.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E7FE1D9154E300D4CAED /* Notification.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CEA1E8251D9154E300D4CAED /* Oss.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E7FF1D9154E300D4CAED /* Oss.pbobjc.h */; };
+		CEA1E8261D9154E300D4CAED /* Oss.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E8001D9154E300D4CAED /* Oss.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CEA1E8271D9154E300D4CAED /* Payment.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E8011D9154E300D4CAED /* Payment.pbobjc.h */; };
+		CEA1E8281D9154E300D4CAED /* Payment.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E8021D9154E300D4CAED /* Payment.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CEA1E8291D9154E300D4CAED /* Platform.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E8031D9154E300D4CAED /* Platform.pbobjc.h */; };
+		CEA1E82A1D9154E300D4CAED /* Platform.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E8041D9154E300D4CAED /* Platform.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CEA1E82B1D9154E300D4CAED /* Result.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E8051D9154E300D4CAED /* Result.pbobjc.h */; };
+		CEA1E82C1D9154E300D4CAED /* Result.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E8061D9154E300D4CAED /* Result.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CEA1E82D1D9154E300D4CAED /* Social.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E8071D9154E300D4CAED /* Social.pbobjc.h */; };
+		CEA1E82E1D9154E300D4CAED /* Social.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E8081D9154E300D4CAED /* Social.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CEA1E82F1D9154E300D4CAED /* Streaming.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E8091D9154E300D4CAED /* Streaming.pbobjc.h */; };
+		CEA1E8301D9154E300D4CAED /* Streaming.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E80A1D9154E300D4CAED /* Streaming.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CEA1E8311D9154E300D4CAED /* Wallet.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E80B1D9154E300D4CAED /* Wallet.pbobjc.h */; };
+		CEA1E8321D9154E300D4CAED /* Wallet.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E80C1D9154E300D4CAED /* Wallet.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CEA1E8381D91597000D4CAED /* MWBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E8341D91597000D4CAED /* MWBaseViewController.h */; };
+		CEA1E8391D91597000D4CAED /* MWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E8351D91597000D4CAED /* MWBaseViewController.m */; };
+		CEA1E83A1D91597000D4CAED /* MWNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E8361D91597000D4CAED /* MWNavigationController.h */; };
+		CEA1E83B1D91597000D4CAED /* MWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E8371D91597000D4CAED /* MWNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		293EA7BA028A58F5FBF909F2 /* Pods-Base.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Base.release.xcconfig"; path = "../../Pods/Target Support Files/Pods-Base/Pods-Base.release.xcconfig"; sourceTree = "<group>"; };
+		5F97B8148C6543486CBF1C1F /* libPods-Base.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Base.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68824402151836E10890E960 /* Pods-Base.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Base.debug.xcconfig"; path = "../../Pods/Target Support Files/Pods-Base/Pods-Base.debug.xcconfig"; sourceTree = "<group>"; };
 		CE1C046A1D913C1D0077FAA7 /* Base.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Base.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1C046D1D913C1D0077FAA7 /* Base.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
 		CE1C046E1D913C1D0077FAA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEA1E7E71D9154E300D4CAED /* Account.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.pbobjc.h; sourceTree = "<group>"; };
+		CEA1E7E81D9154E300D4CAED /* Account.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.pbobjc.m; sourceTree = "<group>"; };
+		CEA1E7E91D9154E300D4CAED /* Chat.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chat.pbobjc.h; sourceTree = "<group>"; };
+		CEA1E7EA1D9154E300D4CAED /* Chat.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chat.pbobjc.m; sourceTree = "<group>"; };
+		CEA1E7EB1D9154E300D4CAED /* Comment.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.pbobjc.h; sourceTree = "<group>"; };
+		CEA1E7EC1D9154E300D4CAED /* Comment.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.pbobjc.m; sourceTree = "<group>"; };
+		CEA1E7ED1D9154E300D4CAED /* Community.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Community.pbobjc.h; sourceTree = "<group>"; };
+		CEA1E7EE1D9154E300D4CAED /* Community.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Community.pbobjc.m; sourceTree = "<group>"; };
+		CEA1E7EF1D9154E300D4CAED /* Contact.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.pbobjc.h; sourceTree = "<group>"; };
+		CEA1E7F01D9154E300D4CAED /* Contact.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.pbobjc.m; sourceTree = "<group>"; };
+		CEA1E7F11D9154E300D4CAED /* Datapublishing.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Datapublishing.pbobjc.h; sourceTree = "<group>"; };
+		CEA1E7F21D9154E300D4CAED /* Datapublishing.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Datapublishing.pbobjc.m; sourceTree = "<group>"; };
+		CEA1E7F31D9154E300D4CAED /* Edge.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Edge.pbobjc.h; sourceTree = "<group>"; };
+		CEA1E7F41D9154E300D4CAED /* Edge.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Edge.pbobjc.m; sourceTree = "<group>"; };
+		CEA1E7F51D9154E300D4CAED /* Gamification.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gamification.pbobjc.h; sourceTree = "<group>"; };
+		CEA1E7F61D9154E300D4CAED /* Gamification.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gamification.pbobjc.m; sourceTree = "<group>"; };
+		CEA1E7F71D9154E300D4CAED /* Login.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.pbobjc.h; sourceTree = "<group>"; };
+		CEA1E7F81D9154E300D4CAED /* Login.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.pbobjc.m; sourceTree = "<group>"; };
+		CEA1E7F91D9154E300D4CAED /* Netdisk.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Netdisk.pbobjc.h; sourceTree = "<group>"; };
+		CEA1E7FA1D9154E300D4CAED /* Netdisk.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Netdisk.pbobjc.m; sourceTree = "<group>"; };
+		CEA1E7FB1D9154E300D4CAED /* News.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.pbobjc.h; sourceTree = "<group>"; };
+		CEA1E7FC1D9154E300D4CAED /* News.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.pbobjc.m; sourceTree = "<group>"; };
+		CEA1E7FD1D9154E300D4CAED /* Notification.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notification.pbobjc.h; sourceTree = "<group>"; };
+		CEA1E7FE1D9154E300D4CAED /* Notification.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notification.pbobjc.m; sourceTree = "<group>"; };
+		CEA1E7FF1D9154E300D4CAED /* Oss.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Oss.pbobjc.h; sourceTree = "<group>"; };
+		CEA1E8001D9154E300D4CAED /* Oss.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Oss.pbobjc.m; sourceTree = "<group>"; };
+		CEA1E8011D9154E300D4CAED /* Payment.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Payment.pbobjc.h; sourceTree = "<group>"; };
+		CEA1E8021D9154E300D4CAED /* Payment.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Payment.pbobjc.m; sourceTree = "<group>"; };
+		CEA1E8031D9154E300D4CAED /* Platform.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Platform.pbobjc.h; sourceTree = "<group>"; };
+		CEA1E8041D9154E300D4CAED /* Platform.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Platform.pbobjc.m; sourceTree = "<group>"; };
+		CEA1E8051D9154E300D4CAED /* Result.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Result.pbobjc.h; sourceTree = "<group>"; };
+		CEA1E8061D9154E300D4CAED /* Result.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Result.pbobjc.m; sourceTree = "<group>"; };
+		CEA1E8071D9154E300D4CAED /* Social.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Social.pbobjc.h; sourceTree = "<group>"; };
+		CEA1E8081D9154E300D4CAED /* Social.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Social.pbobjc.m; sourceTree = "<group>"; };
+		CEA1E8091D9154E300D4CAED /* Streaming.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Streaming.pbobjc.h; sourceTree = "<group>"; };
+		CEA1E80A1D9154E300D4CAED /* Streaming.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Streaming.pbobjc.m; sourceTree = "<group>"; };
+		CEA1E80B1D9154E300D4CAED /* Wallet.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wallet.pbobjc.h; sourceTree = "<group>"; };
+		CEA1E80C1D9154E300D4CAED /* Wallet.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wallet.pbobjc.m; sourceTree = "<group>"; };
+		CEA1E8341D91597000D4CAED /* MWBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWBaseViewController.h; sourceTree = "<group>"; };
+		CEA1E8351D91597000D4CAED /* MWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWBaseViewController.m; sourceTree = "<group>"; };
+		CEA1E8361D91597000D4CAED /* MWNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWNavigationController.h; sourceTree = "<group>"; };
+		CEA1E8371D91597000D4CAED /* MWNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +109,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BE4FBF52C540758404803CE /* libPods-Base.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		151C7450DE86A5306A555E0C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68824402151836E10890E960 /* Pods-Base.debug.xcconfig */,
+				293EA7BA028A58F5FBF909F2 /* Pods-Base.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6E9CEAA10D8C957D12902050 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F97B8148C6543486CBF1C1F /* libPods-Base.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE1C04601D913C1D0077FAA7 = {
 			isa = PBXGroup;
 			children = (
 				CE1C046C1D913C1D0077FAA7 /* Base */,
 				CE1C046B1D913C1D0077FAA7 /* Products */,
+				151C7450DE86A5306A555E0C /* Pods */,
+				6E9CEAA10D8C957D12902050 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -48,8 +156,66 @@
 			children = (
 				CE1C046D1D913C1D0077FAA7 /* Base.h */,
 				CE1C046E1D913C1D0077FAA7 /* Info.plist */,
+				CEA1E8331D91597000D4CAED /* Controller */,
+				CEA1E7E61D9154E300D4CAED /* Model_pb */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		CEA1E7E61D9154E300D4CAED /* Model_pb */ = {
+			isa = PBXGroup;
+			children = (
+				CEA1E7E71D9154E300D4CAED /* Account.pbobjc.h */,
+				CEA1E7E81D9154E300D4CAED /* Account.pbobjc.m */,
+				CEA1E7E91D9154E300D4CAED /* Chat.pbobjc.h */,
+				CEA1E7EA1D9154E300D4CAED /* Chat.pbobjc.m */,
+				CEA1E7EB1D9154E300D4CAED /* Comment.pbobjc.h */,
+				CEA1E7EC1D9154E300D4CAED /* Comment.pbobjc.m */,
+				CEA1E7ED1D9154E300D4CAED /* Community.pbobjc.h */,
+				CEA1E7EE1D9154E300D4CAED /* Community.pbobjc.m */,
+				CEA1E7EF1D9154E300D4CAED /* Contact.pbobjc.h */,
+				CEA1E7F01D9154E300D4CAED /* Contact.pbobjc.m */,
+				CEA1E7F11D9154E300D4CAED /* Datapublishing.pbobjc.h */,
+				CEA1E7F21D9154E300D4CAED /* Datapublishing.pbobjc.m */,
+				CEA1E7F31D9154E300D4CAED /* Edge.pbobjc.h */,
+				CEA1E7F41D9154E300D4CAED /* Edge.pbobjc.m */,
+				CEA1E7F51D9154E300D4CAED /* Gamification.pbobjc.h */,
+				CEA1E7F61D9154E300D4CAED /* Gamification.pbobjc.m */,
+				CEA1E7F71D9154E300D4CAED /* Login.pbobjc.h */,
+				CEA1E7F81D9154E300D4CAED /* Login.pbobjc.m */,
+				CEA1E7F91D9154E300D4CAED /* Netdisk.pbobjc.h */,
+				CEA1E7FA1D9154E300D4CAED /* Netdisk.pbobjc.m */,
+				CEA1E7FB1D9154E300D4CAED /* News.pbobjc.h */,
+				CEA1E7FC1D9154E300D4CAED /* News.pbobjc.m */,
+				CEA1E7FD1D9154E300D4CAED /* Notification.pbobjc.h */,
+				CEA1E7FE1D9154E300D4CAED /* Notification.pbobjc.m */,
+				CEA1E7FF1D9154E300D4CAED /* Oss.pbobjc.h */,
+				CEA1E8001D9154E300D4CAED /* Oss.pbobjc.m */,
+				CEA1E8011D9154E300D4CAED /* Payment.pbobjc.h */,
+				CEA1E8021D9154E300D4CAED /* Payment.pbobjc.m */,
+				CEA1E8031D9154E300D4CAED /* Platform.pbobjc.h */,
+				CEA1E8041D9154E300D4CAED /* Platform.pbobjc.m */,
+				CEA1E8051D9154E300D4CAED /* Result.pbobjc.h */,
+				CEA1E8061D9154E300D4CAED /* Result.pbobjc.m */,
+				CEA1E8071D9154E300D4CAED /* Social.pbobjc.h */,
+				CEA1E8081D9154E300D4CAED /* Social.pbobjc.m */,
+				CEA1E8091D9154E300D4CAED /* Streaming.pbobjc.h */,
+				CEA1E80A1D9154E300D4CAED /* Streaming.pbobjc.m */,
+				CEA1E80B1D9154E300D4CAED /* Wallet.pbobjc.h */,
+				CEA1E80C1D9154E300D4CAED /* Wallet.pbobjc.m */,
+			);
+			path = Model_pb;
+			sourceTree = "<group>";
+		};
+		CEA1E8331D91597000D4CAED /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEA1E8341D91597000D4CAED /* MWBaseViewController.h */,
+				CEA1E8351D91597000D4CAED /* MWBaseViewController.m */,
+				CEA1E8361D91597000D4CAED /* MWNavigationController.h */,
+				CEA1E8371D91597000D4CAED /* MWNavigationController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,7 +225,28 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA1E8311D9154E300D4CAED /* Wallet.pbobjc.h in Headers */,
+				CEA1E8131D9154E300D4CAED /* Community.pbobjc.h in Headers */,
 				CE1C046F1D913C1D0077FAA7 /* Base.h in Headers */,
+				CEA1E8231D9154E300D4CAED /* Notification.pbobjc.h in Headers */,
+				CEA1E8211D9154E300D4CAED /* News.pbobjc.h in Headers */,
+				CEA1E81B1D9154E300D4CAED /* Gamification.pbobjc.h in Headers */,
+				CEA1E83A1D91597000D4CAED /* MWNavigationController.h in Headers */,
+				CEA1E82B1D9154E300D4CAED /* Result.pbobjc.h in Headers */,
+				CEA1E8151D9154E300D4CAED /* Contact.pbobjc.h in Headers */,
+				CEA1E80D1D9154E300D4CAED /* Account.pbobjc.h in Headers */,
+				CEA1E8381D91597000D4CAED /* MWBaseViewController.h in Headers */,
+				CEA1E8171D9154E300D4CAED /* Datapublishing.pbobjc.h in Headers */,
+				CEA1E8271D9154E300D4CAED /* Payment.pbobjc.h in Headers */,
+				CEA1E80F1D9154E300D4CAED /* Chat.pbobjc.h in Headers */,
+				CEA1E8291D9154E300D4CAED /* Platform.pbobjc.h in Headers */,
+				CEA1E8191D9154E300D4CAED /* Edge.pbobjc.h in Headers */,
+				CEA1E81F1D9154E300D4CAED /* Netdisk.pbobjc.h in Headers */,
+				CEA1E82D1D9154E300D4CAED /* Social.pbobjc.h in Headers */,
+				CEA1E82F1D9154E300D4CAED /* Streaming.pbobjc.h in Headers */,
+				CEA1E8111D9154E300D4CAED /* Comment.pbobjc.h in Headers */,
+				CEA1E81D1D9154E300D4CAED /* Login.pbobjc.h in Headers */,
+				CEA1E8251D9154E300D4CAED /* Oss.pbobjc.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,10 +257,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE1C04721D913C1D0077FAA7 /* Build configuration list for PBXNativeTarget "Base" */;
 			buildPhases = (
+				9AB1598FBD7EAD44AAA9DF35 /* [CP] Check Pods Manifest.lock */,
 				CE1C04651D913C1D0077FAA7 /* Sources */,
 				CE1C04661D913C1D0077FAA7 /* Frameworks */,
 				CE1C04671D913C1D0077FAA7 /* Headers */,
 				CE1C04681D913C1D0077FAA7 /* Resources */,
+				4A3C4807B7184F9AB11EA0CC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,11 +315,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4A3C4807B7184F9AB11EA0CC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../../Pods/Target Support Files/Pods-Base/Pods-Base-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AB1598FBD7EAD44AAA9DF35 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE1C04651D913C1D0077FAA7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA1E8141D9154E300D4CAED /* Community.pbobjc.m in Sources */,
+				CEA1E8301D9154E300D4CAED /* Streaming.pbobjc.m in Sources */,
+				CEA1E83B1D91597000D4CAED /* MWNavigationController.m in Sources */,
+				CEA1E81C1D9154E300D4CAED /* Gamification.pbobjc.m in Sources */,
+				CEA1E81E1D9154E300D4CAED /* Login.pbobjc.m in Sources */,
+				CEA1E82E1D9154E300D4CAED /* Social.pbobjc.m in Sources */,
+				CEA1E8221D9154E300D4CAED /* News.pbobjc.m in Sources */,
+				CEA1E81A1D9154E300D4CAED /* Edge.pbobjc.m in Sources */,
+				CEA1E8391D91597000D4CAED /* MWBaseViewController.m in Sources */,
+				CEA1E8181D9154E300D4CAED /* Datapublishing.pbobjc.m in Sources */,
+				CEA1E8321D9154E300D4CAED /* Wallet.pbobjc.m in Sources */,
+				CEA1E8161D9154E300D4CAED /* Contact.pbobjc.m in Sources */,
+				CEA1E82C1D9154E300D4CAED /* Result.pbobjc.m in Sources */,
+				CEA1E8281D9154E300D4CAED /* Payment.pbobjc.m in Sources */,
+				CEA1E82A1D9154E300D4CAED /* Platform.pbobjc.m in Sources */,
+				CEA1E8121D9154E300D4CAED /* Comment.pbobjc.m in Sources */,
+				CEA1E8201D9154E300D4CAED /* Netdisk.pbobjc.m in Sources */,
+				CEA1E8241D9154E300D4CAED /* Notification.pbobjc.m in Sources */,
+				CEA1E8101D9154E300D4CAED /* Chat.pbobjc.m in Sources */,
+				CEA1E80E1D9154E300D4CAED /* Account.pbobjc.m in Sources */,
+				CEA1E8261D9154E300D4CAED /* Oss.pbobjc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +421,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -223,7 +466,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -235,6 +478,7 @@
 		};
 		CE1C04731D913C1D0077FAA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68824402151836E10890E960 /* Pods-Base.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -252,6 +496,7 @@
 		};
 		CE1C04741D913C1D0077FAA7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 293EA7BA028A58F5FBF909F2 /* Pods-Base.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -286,6 +531,7 @@
 				CE1C04741D913C1D0077FAA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

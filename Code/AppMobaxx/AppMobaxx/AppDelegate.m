@@ -1,12 +1,13 @@
 //
 //  AppDelegate.m
-//  AppMain
+//  AppMobaxx
 //
 //  Created by huangJiong on 16/9/20.
 //  Copyright © 2016年 miwu. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "MainTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    _window.backgroundColor = [UIColor whiteColor];
+    _window.rootViewController = [[MainTabBarController alloc] init];
+    [_window makeKeyAndVisible];
     return YES;
 }
 
