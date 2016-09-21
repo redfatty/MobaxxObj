@@ -18,6 +18,7 @@
 		CEA1E8D01D915DDB00D4CAED /* WeiboPubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E8CB1D915DDB00D4CAED /* WeiboPubViewController.m */; };
 		CEA1E8D31D915E9100D4CAED /* Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA1E8D11D915E9100D4CAED /* Base.framework */; };
 		CEA1E8D41D915E9100D4CAED /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA1E8D21D915E9100D4CAED /* Network.framework */; };
+		CEB1DE5D1D92AC1A0014ADC7 /* PostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB1DE5C1D92AC1A0014ADC7 /* PostModel.m */; };
 		CEDEC3E31D92067200A054CF /* LoginMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDEC3E11D92067200A054CF /* LoginMainViewController.m */; };
 		CEDEC3E41D92067200A054CF /* LoginMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDEC3E21D92067200A054CF /* LoginMainViewController.xib */; };
 		CEE9FC071D9260EA00DCB604 /* PostListView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE9FC061D9260EA00DCB604 /* PostListView.m */; };
@@ -55,6 +56,9 @@
 		CEA1E8CB1D915DDB00D4CAED /* WeiboPubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboPubViewController.m; sourceTree = "<group>"; };
 		CEA1E8D11D915E9100D4CAED /* Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Base.framework; path = "../Base/build/Debug-iphoneos/Base.framework"; sourceTree = "<group>"; };
 		CEA1E8D21D915E9100D4CAED /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = "../Network/build/Debug-iphoneos/Network.framework"; sourceTree = "<group>"; };
+		CEB1DE5A1D92AB910014ADC7 /* MobaxxPch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobaxxPch.pch; sourceTree = "<group>"; };
+		CEB1DE5B1D92AC1A0014ADC7 /* PostModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostModel.h; sourceTree = "<group>"; };
+		CEB1DE5C1D92AC1A0014ADC7 /* PostModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostModel.m; sourceTree = "<group>"; };
 		CEDEC3E01D92067200A054CF /* LoginMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginMainViewController.h; sourceTree = "<group>"; };
 		CEDEC3E11D92067200A054CF /* LoginMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginMainViewController.m; sourceTree = "<group>"; };
 		CEDEC3E21D92067200A054CF /* LoginMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginMainViewController.xib; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 				CEA1E89B1D915D2A00D4CAED /* Assets.xcassets */,
 				CEA1E89D1D915D2A00D4CAED /* LaunchScreen.storyboard */,
 				CEA1E8A01D915D2A00D4CAED /* Info.plist */,
+				CEB1DE5A1D92AB910014ADC7 /* MobaxxPch.pch */,
 				CEA1E88F1D915D2A00D4CAED /* Supporting Files */,
 			);
 			path = AppMobaxx;
@@ -188,6 +193,8 @@
 		CEA1E8CC1D915DDB00D4CAED /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CEB1DE5B1D92AC1A0014ADC7 /* PostModel.h */,
+				CEB1DE5C1D92AC1A0014ADC7 /* PostModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -369,6 +376,7 @@
 				CEA1E8941D915D2A00D4CAED /* AppDelegate.m in Sources */,
 				CEA1E8D01D915DDB00D4CAED /* WeiboPubViewController.m in Sources */,
 				CEA1E8B61D915D9500D4CAED /* MainTabBarController.m in Sources */,
+				CEB1DE5D1D92AC1A0014ADC7 /* PostModel.m in Sources */,
 				CEA1E8911D915D2A00D4CAED /* main.m in Sources */,
 				CEDEC3E31D92067200A054CF /* LoginMainViewController.m in Sources */,
 			);
@@ -434,6 +442,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/AppMobaxx/MobaxxPch.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -480,6 +489,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/AppMobaxx/MobaxxPch.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

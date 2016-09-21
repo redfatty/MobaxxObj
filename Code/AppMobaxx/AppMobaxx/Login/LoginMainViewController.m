@@ -8,6 +8,11 @@
 
 #import "LoginMainViewController.h"
 #import <NetworkManager+Login.h>
+#import <Login.pbobjc.h>
+#import <AFManager.h>
+#import <NSString+YYAdd.h>
+#import <News.pbobjc.h>
+#import <NetworkManager+Post.h>
 
 @interface LoginMainViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *accountTfd;
@@ -25,11 +30,36 @@
 }
 - (IBAction)clickLoginBtn:(id)sender {
     
-    [NetworkManager loginWithAccount:_accountTfd.text password:_passwordTfd.text completion:^(PResult *failResult, PLogin *plogin) {
+    __weak typeof(self) weakSelf = self;
+    NSString *pwd = [_passwordTfd.text sha256String];
+    [NetworkManager loginWithAccount:_accountTfd.text password:pwd completion:^(PResult *failResult, PLogin *plogin) {
+        
+        [weakSelf handlePLogin:plogin];
         
     } error:^(NSError *err) {
         
     }];
+}
+
+- (void)handlePLogin:(PLogin *)plogin {
+    NSString *uuid = plogin.uuid;
+    NSString *token = plogin.token;
+    NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
+    [userDef setObject:uuid forKey:@"uuid"];
+    [userDef setObject:token forKey:@"token"];
+    [userDef synchronize];
+    NSString *cookies = [NSString stringWithFormat:@"token=%@;uuid=%@;", token, uuid];
+    [[AFManager sharedManager].requestSerializer setValue:cookies forHTTPHeaderField:@"Cookie"];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    [NetworkManager requestRecommendPostListWithCompletion:^(PResult *failResult, PPostInfoList *postList) {
+        
+    } error:^(NSError *err) {
+        
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {

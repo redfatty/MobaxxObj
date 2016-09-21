@@ -18,6 +18,8 @@
 		CEA1E8D81D91605000D4CAED /* NetworkManager+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E8D61D91605000D4CAED /* NetworkManager+Login.m */; };
 		CEA1E8DB1D91685700D4CAED /* AFManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E8D91D91685700D4CAED /* AFManager.h */; };
 		CEA1E8DC1D91685700D4CAED /* AFManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E8DA1D91685700D4CAED /* AFManager.m */; };
+		CEB1DE521D92A3420014ADC7 /* NetworkManager+Post.h in Headers */ = {isa = PBXBuildFile; fileRef = CEB1DE501D92A3420014ADC7 /* NetworkManager+Post.h */; };
+		CEB1DE531D92A3420014ADC7 /* NetworkManager+Post.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB1DE511D92A3420014ADC7 /* NetworkManager+Post.m */; };
 		CEDEC3E71D92232D00A054CF /* UIViewController+Network.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDEC3E51D92232D00A054CF /* UIViewController+Network.h */; };
 		CEDEC3E81D92232D00A054CF /* UIViewController+Network.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDEC3E61D92232D00A054CF /* UIViewController+Network.m */; };
 /* End PBXBuildFile section */
@@ -41,6 +43,8 @@
 		CEA1E8D61D91605000D4CAED /* NetworkManager+Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkManager+Login.m"; sourceTree = "<group>"; };
 		CEA1E8D91D91685700D4CAED /* AFManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFManager.h; sourceTree = "<group>"; };
 		CEA1E8DA1D91685700D4CAED /* AFManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFManager.m; sourceTree = "<group>"; };
+		CEB1DE501D92A3420014ADC7 /* NetworkManager+Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetworkManager+Post.h"; sourceTree = "<group>"; };
+		CEB1DE511D92A3420014ADC7 /* NetworkManager+Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkManager+Post.m"; sourceTree = "<group>"; };
 		CEDEC3E51D92232D00A054CF /* UIViewController+Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Network.h"; sourceTree = "<group>"; };
 		CEDEC3E61D92232D00A054CF /* UIViewController+Network.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Network.m"; sourceTree = "<group>"; };
 		CFAF4D64A19B8B41B8D29232 /* Pods-Network.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Network.release.xcconfig"; path = "../../Pods/Target Support Files/Pods-Network/Pods-Network.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				CEA1E8D61D91605000D4CAED /* NetworkManager+Login.m */,
 				CEDEC3E51D92232D00A054CF /* UIViewController+Network.h */,
 				CEDEC3E61D92232D00A054CF /* UIViewController+Network.m */,
+				CEB1DE501D92A3420014ADC7 /* NetworkManager+Post.h */,
+				CEB1DE511D92A3420014ADC7 /* NetworkManager+Post.m */,
 				CE94213A1D9241F3008A8736 /* NetworkPch.pch */,
 				CE1C04281D913B600077FAA7 /* Info.plist */,
 			);
@@ -126,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE1C04291D913B600077FAA7 /* Network.h in Headers */,
+				CEB1DE521D92A3420014ADC7 /* NetworkManager+Post.h in Headers */,
 				CEA1E8DB1D91685700D4CAED /* AFManager.h in Headers */,
 				CEA1E8D71D91605000D4CAED /* NetworkManager+Login.h in Headers */,
 				CEA1E7E01D91546400D4CAED /* NetworkManager.h in Headers */,
@@ -237,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB1DE531D92A3420014ADC7 /* NetworkManager+Post.m in Sources */,
 				CEA1E8DC1D91685700D4CAED /* AFManager.m in Sources */,
 				CEA1E8D81D91605000D4CAED /* NetworkManager+Login.m in Sources */,
 				CEA1E7E51D91549B00D4CAED /* NetworkHelper.m in Sources */,

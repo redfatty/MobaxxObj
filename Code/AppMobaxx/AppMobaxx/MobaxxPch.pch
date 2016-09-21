@@ -1,0 +1,17 @@
+//
+//  MobaxxPch.pch
+//  AppMobaxx
+//
+//  Created by huangJiong on 16/9/21.
+//  Copyright © 2016年 miwu. All rights reserved.
+//
+
+#ifndef MobaxxPch_pch
+#define MobaxxPch_pch
+
+#import <CommonConst.h>
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* MobaxxPch_pch */

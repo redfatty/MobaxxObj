@@ -147,6 +147,14 @@
     }];
 }
 
++ (void)setupCookies {
+    NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
+    NSString *uuid = [userDef stringForKey:@"uuid"];
+    NSString *token = [userDef stringForKey:@"token"];
+    NSString *cookies = [NSString stringWithFormat:@"token=%@;uuid=%@;", token, uuid];
+    [[AFManager sharedManager].requestSerializer setValue:cookies forHTTPHeaderField:@"Cookie"];
+}
+
 + (BOOL)checkNetwrokReachable {
     AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
     [mgr startMonitoring];

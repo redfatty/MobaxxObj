@@ -53,6 +53,7 @@
 		CEA1E8391D91597000D4CAED /* MWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E8351D91597000D4CAED /* MWBaseViewController.m */; };
 		CEA1E83A1D91597000D4CAED /* MWNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E8361D91597000D4CAED /* MWNavigationController.h */; };
 		CEA1E83B1D91597000D4CAED /* MWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E8371D91597000D4CAED /* MWNavigationController.m */; };
+		CEB1DE591D92AAB30014ADC7 /* CommonConst.h in Headers */ = {isa = PBXBuildFile; fileRef = CEB1DE581D92AAB00014ADC7 /* CommonConst.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		CEA1E8351D91597000D4CAED /* MWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWBaseViewController.m; sourceTree = "<group>"; };
 		CEA1E8361D91597000D4CAED /* MWNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWNavigationController.h; sourceTree = "<group>"; };
 		CEA1E8371D91597000D4CAED /* MWNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWNavigationController.m; sourceTree = "<group>"; };
+		CEB1DE581D92AAB00014ADC7 /* CommonConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonConst.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				CE1C046D1D913C1D0077FAA7 /* Base.h */,
 				CE94213B1D925BB9008A8736 /* PbHelper.h */,
 				CE94213C1D925BB9008A8736 /* PbHelper.m */,
+				CEB1DE581D92AAB00014ADC7 /* CommonConst.h */,
 				CE1C046E1D913C1D0077FAA7 /* Info.plist */,
 				CEA1E8331D91597000D4CAED /* Controller */,
 				CEA1E7E61D9154E300D4CAED /* Model_pb */,
@@ -250,6 +253,7 @@
 				CEA1E81F1D9154E300D4CAED /* Netdisk.pbobjc.h in Headers */,
 				CE94213D1D925BB9008A8736 /* PbHelper.h in Headers */,
 				CEA1E82D1D9154E300D4CAED /* Social.pbobjc.h in Headers */,
+				CEB1DE591D92AAB30014ADC7 /* CommonConst.h in Headers */,
 				CEA1E82F1D9154E300D4CAED /* Streaming.pbobjc.h in Headers */,
 				CEA1E8111D9154E300D4CAED /* Comment.pbobjc.h in Headers */,
 				CEA1E81D1D9154E300D4CAED /* Login.pbobjc.h in Headers */,

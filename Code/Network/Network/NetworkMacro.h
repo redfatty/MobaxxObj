@@ -11,6 +11,7 @@
 @class GPBMessage;
 @class PResult;
 @class PLogin;
+@class PPostInfoList;
 @protocol AFMultipartFormData;
 
 
@@ -36,5 +37,8 @@ typedef void(^PResultBlock)(PResult *presult);
 
 /**  登录 */
 typedef void(^LoginBlock)(PResult *failResult, PLogin *plogin);
+
+/**  帖子列表 */
+typedef void(^PostListBlock)(PResult *failResult, PPostInfoList *postList);
 
 #endif /* NetworkMacro_h */

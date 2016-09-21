@@ -5,6 +5,15 @@
       location = "group:Code/AppMobaxx/AppMobaxx.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Code/UILayer/UILayer.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Code/DataLayer/DataLayer.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Code/NetworkLayer/NetworkLayer.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Code/Network/Network.xcodeproj">
    </FileRef>
    <FileRef
