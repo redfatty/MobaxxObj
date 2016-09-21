@@ -30,7 +30,7 @@
         if (!completion) {
             return;
         }
-        PResult *presult = [NetworkHelper checkPbObj:pbObj pbClass:PResult.class];
+        PResult *presult = [PbHelper checkPbObj:pbObj expectClass:PResult.class];
         completion(presult);
     } failure:^(NSError *err) {
         
@@ -56,9 +56,9 @@
         if (!completion) {
             return;
         }
-        
-        PResult *failResult = [NetworkHelper checkPbObj:pbObj pbClass:PResult.class];
-        PLogin *plogin = [NetworkHelper checkPbObj:pbObj pbClass:PLogin.class];
+
+        PResult *failResult = [PbHelper checkPbObj:pbObj expectClass:PResult.class];
+        PLogin *plogin = [PbHelper checkPbObj:pbObj expectClass:PLogin.class];
         completion(failResult ,plogin);
     } failure:^(NSError *err) {
         

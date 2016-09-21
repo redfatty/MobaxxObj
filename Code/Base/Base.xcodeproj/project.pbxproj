@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6BE4FBF52C540758404803CE /* libPods-Base.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F97B8148C6543486CBF1C1F /* libPods-Base.a */; };
 		CE1C046F1D913C1D0077FAA7 /* Base.h in Headers */ = {isa = PBXBuildFile; fileRef = CE1C046D1D913C1D0077FAA7 /* Base.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE94213D1D925BB9008A8736 /* PbHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = CE94213B1D925BB9008A8736 /* PbHelper.h */; };
+		CE94213E1D925BB9008A8736 /* PbHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CE94213C1D925BB9008A8736 /* PbHelper.m */; };
 		CEA1E80D1D9154E300D4CAED /* Account.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E7E71D9154E300D4CAED /* Account.pbobjc.h */; };
 		CEA1E80E1D9154E300D4CAED /* Account.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E7E81D9154E300D4CAED /* Account.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CEA1E80F1D9154E300D4CAED /* Chat.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E7E91D9154E300D4CAED /* Chat.pbobjc.h */; };
@@ -60,6 +62,8 @@
 		CE1C046A1D913C1D0077FAA7 /* Base.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Base.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1C046D1D913C1D0077FAA7 /* Base.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
 		CE1C046E1D913C1D0077FAA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE94213B1D925BB9008A8736 /* PbHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PbHelper.h; sourceTree = "<group>"; };
+		CE94213C1D925BB9008A8736 /* PbHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PbHelper.m; sourceTree = "<group>"; };
 		CEA1E7E71D9154E300D4CAED /* Account.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.pbobjc.h; sourceTree = "<group>"; };
 		CEA1E7E81D9154E300D4CAED /* Account.pbobjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.pbobjc.m; sourceTree = "<group>"; };
 		CEA1E7E91D9154E300D4CAED /* Chat.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chat.pbobjc.h; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				CE1C046D1D913C1D0077FAA7 /* Base.h */,
+				CE94213B1D925BB9008A8736 /* PbHelper.h */,
+				CE94213C1D925BB9008A8736 /* PbHelper.m */,
 				CE1C046E1D913C1D0077FAA7 /* Info.plist */,
 				CEA1E8331D91597000D4CAED /* Controller */,
 				CEA1E7E61D9154E300D4CAED /* Model_pb */,
@@ -242,6 +248,7 @@
 				CEA1E8291D9154E300D4CAED /* Platform.pbobjc.h in Headers */,
 				CEA1E8191D9154E300D4CAED /* Edge.pbobjc.h in Headers */,
 				CEA1E81F1D9154E300D4CAED /* Netdisk.pbobjc.h in Headers */,
+				CE94213D1D925BB9008A8736 /* PbHelper.h in Headers */,
 				CEA1E82D1D9154E300D4CAED /* Social.pbobjc.h in Headers */,
 				CEA1E82F1D9154E300D4CAED /* Streaming.pbobjc.h in Headers */,
 				CEA1E8111D9154E300D4CAED /* Comment.pbobjc.h in Headers */,
@@ -372,6 +379,7 @@
 				CEA1E8201D9154E300D4CAED /* Netdisk.pbobjc.m in Sources */,
 				CEA1E8241D9154E300D4CAED /* Notification.pbobjc.m in Sources */,
 				CEA1E8101D9154E300D4CAED /* Chat.pbobjc.m in Sources */,
+				CE94213E1D925BB9008A8736 /* PbHelper.m in Sources */,
 				CEA1E80E1D9154E300D4CAED /* Account.pbobjc.m in Sources */,
 				CEA1E8261D9154E300D4CAED /* Oss.pbobjc.m in Sources */,
 			);

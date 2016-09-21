@@ -18,8 +18,6 @@
 		CEA1E8D81D91605000D4CAED /* NetworkManager+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E8D61D91605000D4CAED /* NetworkManager+Login.m */; };
 		CEA1E8DB1D91685700D4CAED /* AFManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E8D91D91685700D4CAED /* AFManager.h */; };
 		CEA1E8DC1D91685700D4CAED /* AFManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E8DA1D91685700D4CAED /* AFManager.m */; };
-		CEDEC3DD1D92052300A054CF /* Net.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDEC3DB1D92052300A054CF /* Net.h */; };
-		CEDEC3DE1D92052300A054CF /* Net.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDEC3DC1D92052300A054CF /* Net.m */; };
 		CEDEC3E71D92232D00A054CF /* UIViewController+Network.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDEC3E51D92232D00A054CF /* UIViewController+Network.h */; };
 		CEDEC3E81D92232D00A054CF /* UIViewController+Network.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDEC3E61D92232D00A054CF /* UIViewController+Network.m */; };
 /* End PBXBuildFile section */
@@ -30,6 +28,7 @@
 		CE1C04241D913B600077FAA7 /* Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1C04271D913B600077FAA7 /* Network.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Network.h; sourceTree = "<group>"; };
 		CE1C04281D913B600077FAA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE94213A1D9241F3008A8736 /* NetworkPch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkPch.pch; sourceTree = "<group>"; };
 		CEA1E7D51D91535B00D4CAED /* Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Base.framework; path = "../Base/build/Debug-iphoneos/Base.framework"; sourceTree = "<group>"; };
 		CEA1E7DB1D9153FB00D4CAED /* NetworkConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkConst.h; sourceTree = "<group>"; };
 		CEA1E7DC1D91542F00D4CAED /* NetworkMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkMacro.h; sourceTree = "<group>"; };
@@ -42,8 +41,6 @@
 		CEA1E8D61D91605000D4CAED /* NetworkManager+Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkManager+Login.m"; sourceTree = "<group>"; };
 		CEA1E8D91D91685700D4CAED /* AFManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFManager.h; sourceTree = "<group>"; };
 		CEA1E8DA1D91685700D4CAED /* AFManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFManager.m; sourceTree = "<group>"; };
-		CEDEC3DB1D92052300A054CF /* Net.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Net.h; sourceTree = "<group>"; };
-		CEDEC3DC1D92052300A054CF /* Net.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Net.m; sourceTree = "<group>"; };
 		CEDEC3E51D92232D00A054CF /* UIViewController+Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Network.h"; sourceTree = "<group>"; };
 		CEDEC3E61D92232D00A054CF /* UIViewController+Network.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Network.m"; sourceTree = "<group>"; };
 		CFAF4D64A19B8B41B8D29232 /* Pods-Network.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Network.release.xcconfig"; path = "../../Pods/Target Support Files/Pods-Network/Pods-Network.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,8 +103,7 @@
 				CEA1E8D61D91605000D4CAED /* NetworkManager+Login.m */,
 				CEDEC3E51D92232D00A054CF /* UIViewController+Network.h */,
 				CEDEC3E61D92232D00A054CF /* UIViewController+Network.m */,
-				CEDEC3DB1D92052300A054CF /* Net.h */,
-				CEDEC3DC1D92052300A054CF /* Net.m */,
+				CE94213A1D9241F3008A8736 /* NetworkPch.pch */,
 				CE1C04281D913B600077FAA7 /* Info.plist */,
 			);
 			path = Network;
@@ -129,7 +125,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEDEC3DD1D92052300A054CF /* Net.h in Headers */,
 				CE1C04291D913B600077FAA7 /* Network.h in Headers */,
 				CEA1E8DB1D91685700D4CAED /* AFManager.h in Headers */,
 				CEA1E8D71D91605000D4CAED /* NetworkManager+Login.h in Headers */,
@@ -245,7 +240,6 @@
 				CEA1E8DC1D91685700D4CAED /* AFManager.m in Sources */,
 				CEA1E8D81D91605000D4CAED /* NetworkManager+Login.m in Sources */,
 				CEA1E7E51D91549B00D4CAED /* NetworkHelper.m in Sources */,
-				CEDEC3DE1D92052300A054CF /* Net.m in Sources */,
 				CEA1E7E11D91546400D4CAED /* NetworkManager.m in Sources */,
 				CEDEC3E81D92232D00A054CF /* UIViewController+Network.m in Sources */,
 			);
@@ -285,6 +279,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Network/NetworkPch.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -334,6 +329,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Network/NetworkPch.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

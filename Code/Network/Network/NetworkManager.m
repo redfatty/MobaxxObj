@@ -40,8 +40,8 @@
        [NetworkHelper hiddenLoading:loadingUI];
         
        if (success) {
-           GPBMessage *pbObj = [NetworkHelper parsePbOriginalData:responseObject];
-           success(responseObject);
+           GPBMessage *pbObj = [PbHelper parsePbOriginalData:responseObject];
+           success(pbObj);
        }
         
     } failure:^(NSURLSessionDataTask * _Nullable task,
@@ -81,7 +81,7 @@
             [NetworkHelper hiddenLoading:loadingUI];
             
             if (success) {
-                GPBMessage *pbObj = [NetworkHelper parsePbOriginalData:responseObject];
+                GPBMessage *pbObj = [PbHelper parsePbOriginalData:responseObject];
                 success(pbObj);
             }
             
@@ -107,7 +107,7 @@
             //成功
             [NetworkHelper hiddenLoading:loadingUI];
             if (success) {
-                GPBMessage *pbObj = [NetworkHelper parsePbOriginalData:responseObject];
+                GPBMessage *pbObj = [PbHelper parsePbOriginalData:responseObject];
                 success(pbObj);
             }
 
@@ -134,7 +134,7 @@
         [NetworkHelper hiddenLoading:loadingUI];
         
         if (success) {
-            GPBMessage *pbObj = [NetworkHelper parsePbOriginalData:responseObject];
+            GPBMessage *pbObj = [PbHelper parsePbOriginalData:responseObject];
             success(pbObj);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

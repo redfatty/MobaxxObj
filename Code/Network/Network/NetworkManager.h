@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <PbHelper.h>
 #import "URLDefine.h"
 #import "NetworkHelper.h"
 #import "NetworkMacro.h"
