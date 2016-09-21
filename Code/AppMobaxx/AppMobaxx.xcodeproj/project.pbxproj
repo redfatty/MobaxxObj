@@ -20,6 +20,7 @@
 		CEA1E8D41D915E9100D4CAED /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA1E8D21D915E9100D4CAED /* Network.framework */; };
 		CEDEC3E31D92067200A054CF /* LoginMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDEC3E11D92067200A054CF /* LoginMainViewController.m */; };
 		CEDEC3E41D92067200A054CF /* LoginMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDEC3E21D92067200A054CF /* LoginMainViewController.xib */; };
+		CEE9FC071D9260EA00DCB604 /* PostListView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE9FC061D9260EA00DCB604 /* PostListView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		CEDEC3E01D92067200A054CF /* LoginMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginMainViewController.h; sourceTree = "<group>"; };
 		CEDEC3E11D92067200A054CF /* LoginMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginMainViewController.m; sourceTree = "<group>"; };
 		CEDEC3E21D92067200A054CF /* LoginMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginMainViewController.xib; sourceTree = "<group>"; };
+		CEE9FC051D9260EA00DCB604 /* PostListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostListView.h; sourceTree = "<group>"; };
+		CEE9FC061D9260EA00DCB604 /* PostListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostListView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +195,8 @@
 		CEA1E8CE1D915DDB00D4CAED /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CEE9FC051D9260EA00DCB604 /* PostListView.h */,
+				CEE9FC061D9260EA00DCB604 /* PostListView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEA1E8CF1D915DDB00D4CAED /* WeiboMainViewController.m in Sources */,
+				CEE9FC071D9260EA00DCB604 /* PostListView.m in Sources */,
 				CEA1E8941D915D2A00D4CAED /* AppDelegate.m in Sources */,
 				CEA1E8D01D915DDB00D4CAED /* WeiboPubViewController.m in Sources */,
 				CEA1E8B61D915D9500D4CAED /* MainTabBarController.m in Sources */,

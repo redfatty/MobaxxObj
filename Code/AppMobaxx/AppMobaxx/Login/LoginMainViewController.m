@@ -7,8 +7,11 @@
 //
 
 #import "LoginMainViewController.h"
+#import <NetworkManager+Login.h>
 
 @interface LoginMainViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *accountTfd;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTfd;
 
 @end
 
@@ -16,7 +19,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    _accountTfd.text = @"+8613302431090";
+    _passwordTfd.text = @"123456";
+}
+- (IBAction)clickLoginBtn:(id)sender {
+    
+    [NetworkManager loginWithAccount:_accountTfd.text password:_passwordTfd.text completion:^(PResult *failResult, PLogin *plogin) {
+        
+    } error:^(NSError *err) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

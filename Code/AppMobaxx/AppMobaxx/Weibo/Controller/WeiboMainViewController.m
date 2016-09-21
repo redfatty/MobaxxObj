@@ -8,11 +8,13 @@
 
 #import "WeiboMainViewController.h"
 #import <NetworkManager+Login.h>
+#import <Masonry.h>
 #import <NSString+YYAdd.h>
+#import "PostListView.h"
 
 
 @interface WeiboMainViewController ()
-
+@property (nonatomic, weak) PostListView *postListView;
 @end
 
 @implementation WeiboMainViewController
@@ -20,9 +22,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"微博";
+    self.title = @"最新消息";
     
+    [self requestPostListData];
     [self gotoLogin];
+}
+
+- (void)requestPostListData {
+    
 }
 
 - (void)gotoLogin {
@@ -49,6 +56,20 @@
 //    } error:^(NSError *err) {
 //        
 //    }];
+}
+
+- (PostListView *)postListView {
+    if (_postListView == nil) {
+        PostListView *listView = [[PostListView alloc] init];
+        [self.view addSubview:listView];
+        [listView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(@(0));
+            make.left.equalTo(@(0));
+            make.right.equalTo(@(0));
+            make.bottom.equalTo(@(0));
+        }];
+    }
+    return _postListView;
 }
 
 - (void)didReceiveMemoryWarning {
