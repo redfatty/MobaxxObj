@@ -18,4 +18,5 @@ target 'Base' do
     pod 'Masonry'
     pod 'YYKit'
     pod 'MBProgressHUD'
+    pod 'SDWebImage'
 end

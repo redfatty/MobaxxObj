@@ -20,6 +20,9 @@
       location = "group:Code/Base/Base.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:BaseLayer/BaseLayer.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
