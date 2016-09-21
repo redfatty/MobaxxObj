@@ -1,29 +1,22 @@
 //
-//  MainTabBarController.m
-//  MiwuApp
+//  LoginMainViewController.m
+//  AppMobaxx
 //
-//  Created by huangJiong on 16/9/18.
+//  Created by huangJiong on 16/9/21.
 //  Copyright © 2016年 miwu. All rights reserved.
 //
 
-#import "MainTabBarController.h"
-#import <MWNavigationController.h>
-#import "WeiboMainViewController.h"
+#import "LoginMainViewController.h"
 
-
-@interface MainTabBarController ()
+@interface LoginMainViewController ()
 
 @end
 
-@implementation MainTabBarController
+@implementation LoginMainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    WeiboMainViewController *weiboMainVC = [WeiboMainViewController loadFromXib:nil bundle:nil];
-    
-    [self addChildViewController:[MWNavigationController createWithRootVC:weiboMainVC]];
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {

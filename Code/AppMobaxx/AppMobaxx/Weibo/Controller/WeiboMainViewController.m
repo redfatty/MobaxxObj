@@ -37,7 +37,8 @@
 //        
 //    } error:^(NSError *err) { }];
     
-    [NetworkManager requestSmsCodeWithPhone:@"+13620946464" type:2 completion:^(PResult *presult) {
+    NSLog(@"点击了");
+    [NetworkManager requestSmsCodeWithPhone:@"+8613620946464" type:2 completion:^(PResult *presult) {
         
     } error:^(NSError *err) {
         

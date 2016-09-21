@@ -15,6 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - Masonry (1.0.2)
+  - MBProgressHUD (1.0.0)
   - Protobuf (3.0.0-beta-2)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
@@ -23,15 +24,17 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - Masonry
+  - MBProgressHUD
   - Protobuf (= 3.0.0-beta-2)
   - YYKit
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   Protobuf: f6e2be538e98cf00d9c00b276a32b7995b1f0328
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 23e84ecc67842e8d47fb98281b3be489c7632bcb
+PODFILE CHECKSUM: 07b94f6ddaad91efe34c3dbefef95605da1f00a8
 
 COCOAPODS: 1.0.1

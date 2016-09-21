@@ -15,13 +15,24 @@
 @interface NetworkManager : NSObject
 
 + (void)get:(NSString *)url
+  loadingUI:(BOOL)loadingUI
      params:(NSDictionary *)params
-    success:(void(^)(GPBMessage *pbObj))success
-    failure:(void(^)(NSError *error))failure;
+   progress:(ProgressBlock)progress
+    success:(GpbBlock)success
+    failure:(ErrorBlock)failure;
 
 + (void)post:(NSString *)url
-     params:(NSDictionary *)params
-    success:(void(^)(GPBMessage *pbObj))success
-    failure:(void(^)(NSError *error))failure;
+   loadingUI:(BOOL)loadingUI
+      params:(NSDictionary *)params
+  configBody:(ConfigBodyBlock)configBody
+    progress:(ProgressBlock)progress
+     success:(GpbBlock)success
+     failure:(ErrorBlock)failure;
+
++ (void)delette:(NSString *)url
+      loadingUI:(BOOL)loadingUI
+         params:(NSDictionary *)params
+        success:(GpbBlock)success
+        failure:(ErrorBlock)failure;
 
 @end

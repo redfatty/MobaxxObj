@@ -21,11 +21,23 @@
 
 #pragma mark - get
 + (void)get:(NSString *)url
+  loadingUI:(BOOL)loadingUI
      params:(NSDictionary *)params
-    success:(void (^)(GPBMessage *))success
-    failure:(void (^)(NSError *))failure {
+   progress:(ProgressBlock)progress
+    success:(GpbBlock)success
+    failure:(ErrorBlock)failure {
     
-    [[AFManager sharedManager] GET:url parameters:params progress:NULL success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [NetworkHelper showLoading:loadingUI];
+    
+    [[AFManager sharedManager] GET:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
+        //进度
+        if (progress) {
+            progress(uploadProgress);
+        }
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        //成功
+       [NetworkHelper hiddenLoading:loadingUI];
         
        if (success) {
            GPBMessage *pbObj = [NetworkHelper parsePbOriginalData:responseObject];
@@ -34,6 +46,9 @@
         
     } failure:^(NSURLSessionDataTask * _Nullable task,
                 NSError * _Nonnull error) {
+        //失败
+        [NetworkHelper hiddenLoading:loadingUI];
+        
         if (failure) {
             failure(error);
         }
@@ -41,18 +56,91 @@
 }
 
 + (void)post:(NSString *)url
+   loadingUI:(BOOL)loadingUI
       params:(NSDictionary *)params
-     success:(void (^)(GPBMessage *))success
-     failure:(void (^)(NSError *))failure {
+  configBody:(ConfigBodyBlock)configBody
+    progress:(ProgressBlock)progress
+     success:(GpbBlock)success
+     failure:(ErrorBlock)failure {
+
+    [NetworkHelper showLoading:loadingUI];
     
-    [[AFManager sharedManager] POST:url parameters:params progress:NULL success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    if (configBody) {
+        //一.有表单数据
+        [[AFManager sharedManager] POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+            //配置body
+            configBody(formData);
+        } progress:^(NSProgress * _Nonnull uploadProgress) {
+            //进度
+            if (progress) {
+                progress(uploadProgress);
+            }
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            //成功
+            [NetworkHelper hiddenLoading:loadingUI];
+            
+            if (success) {
+                GPBMessage *pbObj = [NetworkHelper parsePbOriginalData:responseObject];
+                success(pbObj);
+            }
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            //失败
+            [NetworkHelper hiddenLoading:loadingUI];
+            
+            if (failure) {
+                failure(error);
+            }
+        }];
+    } else {
+        //二.没有表单数据
+        [[AFManager sharedManager] POST:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
+            //进度
+            if (progress) {
+                progress(uploadProgress);
+            }
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            
+            NSLog(@"请求成功成功成功了");
+            //成功
+            [NetworkHelper hiddenLoading:loadingUI];
+            if (success) {
+                GPBMessage *pbObj = [NetworkHelper parsePbOriginalData:responseObject];
+                success(pbObj);
+            }
+
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            //失败
+            [NetworkHelper hiddenLoading:loadingUI];
+            if (failure) {
+                failure(error);
+            }
+        }];
+    }
+}
+
++ (void)delette:(NSString *)url
+      loadingUI:(BOOL)loadingUI
+         params:(NSDictionary *)params
+        success:(GpbBlock)success
+        failure:(ErrorBlock)failure {
+    
+    [NetworkHelper showLoading:loadingUI];
+    
+    [[AFManager sharedManager] DELETE:url parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        [NetworkHelper hiddenLoading:loadingUI];
         
         if (success) {
             GPBMessage *pbObj = [NetworkHelper parsePbOriginalData:responseObject];
             success(pbObj);
         }
-        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        [NetworkHelper hiddenLoading:loadingUI];
+        
         if (failure) {
             failure(error);
         }

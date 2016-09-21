@@ -10,4 +10,12 @@
 
 @interface MWBaseViewController : UIViewController
 
+
++ (instancetype)loadFromXib:(NSString *)xib
+                     bundle:(NSBundle *)bundle;
+
++ (instancetype)loadFromStoryBoard:(NSString *)sb
+                        identifier:(NSString *)identifier
+                            bundle:(NSBundle *)bundle;
+
 @end

@@ -25,15 +25,16 @@
     params[@"lang"] = @"zh-cn";
     params[@"appid"] = @"bbef2ab2b5d07b5583";
     
-    [self post:URL_Login_SmsCode params:params success:^(GPBMessage *pbObj) {
+    [self post:URL_Login_SmsCode loadingUI:YES params:params configBody:NULL progress:NULL success:^(GPBMessage *pbObj) {
         
         if (!completion) {
             return;
         }
         PResult *presult = [NetworkHelper checkPbObj:pbObj pbClass:PResult.class];
         completion(presult);
-    } failure:error];
-    
+    } failure:^(NSError *err) {
+        
+    }];
 }
 
 + (void)loginWithAccount:(NSString *)account
@@ -51,17 +52,17 @@
     params[@"channel"] = @"0";//
     params[@"appid"] = @"bbef2ab2b5d07b5583";//
 
-    [self get:URL_Login
-       params:params
-      success:^(GPBMessage *pbObj) {
-          if (!completion) {
-              return;
-          }
-          
-          PResult *failResult = [NetworkHelper checkPbObj:pbObj pbClass:PResult.class];
-          PLogin *plogin = [NetworkHelper checkPbObj:pbObj pbClass:PLogin.class];
-          completion(failResult ,plogin);
-    } failure:error];
+    [self get:URL_Login loadingUI:YES params:params progress:NULL success:^(GPBMessage *pbObj) {
+        if (!completion) {
+            return;
+        }
+        
+        PResult *failResult = [NetworkHelper checkPbObj:pbObj pbClass:PResult.class];
+        PLogin *plogin = [NetworkHelper checkPbObj:pbObj pbClass:PLogin.class];
+        completion(failResult ,plogin);
+    } failure:^(NSError *err) {
+        
+    }];
 }
 
 @end

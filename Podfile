@@ -17,4 +17,5 @@ target 'Base' do
     pod 'Protobuf', '3.0.0-beta-2'
     pod 'Masonry'
     pod 'YYKit'
+    pod 'MBProgressHUD'
 end

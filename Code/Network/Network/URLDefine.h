@@ -9,7 +9,10 @@
 #ifndef URLDefine_h
 #define URLDefine_h
 
-#define URL_BASE @"https://sep.miwutech.com/"
+/**********         定义各接口URL        ***********/
+
+#define URL_BASE @"http://47.88.10.109:80/"
+//#define URL_BASE @"https://sep.miwutech.com/"
 
 #define URL_Login @"v1/login/account"
 #define URL_Login_SmsCode @"v1/login/authcode"

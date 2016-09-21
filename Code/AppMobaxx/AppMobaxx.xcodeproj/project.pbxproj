@@ -18,6 +18,8 @@
 		CEA1E8D01D915DDB00D4CAED /* WeiboPubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA1E8CB1D915DDB00D4CAED /* WeiboPubViewController.m */; };
 		CEA1E8D31D915E9100D4CAED /* Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA1E8D11D915E9100D4CAED /* Base.framework */; };
 		CEA1E8D41D915E9100D4CAED /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA1E8D21D915E9100D4CAED /* Network.framework */; };
+		CEDEC3E31D92067200A054CF /* LoginMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDEC3E11D92067200A054CF /* LoginMainViewController.m */; };
+		CEDEC3E41D92067200A054CF /* LoginMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDEC3E21D92067200A054CF /* LoginMainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,9 @@
 		CEA1E8CB1D915DDB00D4CAED /* WeiboPubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboPubViewController.m; sourceTree = "<group>"; };
 		CEA1E8D11D915E9100D4CAED /* Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Base.framework; path = "../Base/build/Debug-iphoneos/Base.framework"; sourceTree = "<group>"; };
 		CEA1E8D21D915E9100D4CAED /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = "../Network/build/Debug-iphoneos/Network.framework"; sourceTree = "<group>"; };
+		CEDEC3E01D92067200A054CF /* LoginMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginMainViewController.h; sourceTree = "<group>"; };
+		CEDEC3E11D92067200A054CF /* LoginMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginMainViewController.m; sourceTree = "<group>"; };
+		CEDEC3E21D92067200A054CF /* LoginMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginMainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +122,7 @@
 		CEA1E88E1D915D2A00D4CAED /* AppMobaxx */ = {
 			isa = PBXGroup;
 			children = (
+				CEDEC3DF1D92064F00A054CF /* Login */,
 				CEA1E8C41D915DDB00D4CAED /* Weibo */,
 				CEA1E8921D915D2A00D4CAED /* AppDelegate.h */,
 				CEA1E8931D915D2A00D4CAED /* AppDelegate.m */,
@@ -188,6 +194,16 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CEDEC3DF1D92064F00A054CF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CEDEC3E01D92067200A054CF /* LoginMainViewController.h */,
+				CEDEC3E11D92067200A054CF /* LoginMainViewController.m */,
+				CEDEC3E21D92067200A054CF /* LoginMainViewController.xib */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEA1E89F1D915D2A00D4CAED /* LaunchScreen.storyboard in Resources */,
+				CEDEC3E41D92067200A054CF /* LoginMainViewController.xib in Resources */,
 				CEA1E89C1D915D2A00D4CAED /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +364,7 @@
 				CEA1E8D01D915DDB00D4CAED /* WeiboPubViewController.m in Sources */,
 				CEA1E8B61D915D9500D4CAED /* MainTabBarController.m in Sources */,
 				CEA1E8911D915D2A00D4CAED /* main.m in Sources */,
+				CEDEC3E31D92067200A054CF /* LoginMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

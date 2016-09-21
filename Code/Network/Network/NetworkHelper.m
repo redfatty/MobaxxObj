@@ -9,6 +9,8 @@
 #import "NetworkHelper.h"
 #import <GPBMessage.h>
 #import <Result.pbobjc.h>
+#import <MBProgressHUD.h>
+#import "UIViewController+Network.h"
 
 @implementation NetworkHelper
 
@@ -27,5 +29,22 @@
     }
     return nil;
 }
+
++ (void)showLoading:(BOOL)loading {
+    if (loading) {
+        UIViewController *vc = [UIViewController currentViewController];
+//        [MBProgressHUD showHUDAddedTo:vc.view animated:YES];
+    }
+}
+
++ (void)hiddenLoading:(BOOL)loading {
+    if (loading) {
+        UIViewController *vc = [UIViewController currentViewController];
+//        [MBProgressHUD hideHUDForView:vc.view animated:YES];
+    }
+}
+
+
+
 
 @end

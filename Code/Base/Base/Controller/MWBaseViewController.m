@@ -14,6 +14,31 @@
 
 @implementation MWBaseViewController
 
++ (instancetype)loadFromXib:(NSString *)xib bundle:(NSBundle *)bundle{
+    UIViewController *vc = nil;
+    if (xib) {
+        vc = [[self alloc] initWithNibName:xib bundle:bundle];
+        return vc;
+    }
+    
+    xib = NSStringFromClass(self.class);
+    if ([bundle loadNibNamed:xib owner:nil options:nil]) {
+        vc = [[self alloc] initWithNibName:xib bundle:bundle];
+        return vc;
+    }
+    
+    vc = [[self alloc] init];
+    return vc;
+}
+
++ (instancetype)loadFromStoryBoard:(NSString *)sb
+                        identifier:(NSString *)identifier
+                            bundle:(NSBundle *)bundle {
+    UIStoryboard *sbObj = [UIStoryboard storyboardWithName:sb bundle:bundle];
+    UIViewController *vc = [sbObj instantiateViewControllerWithIdentifier:identifier];
+    return vc;
+}
+
 //- (instancetype)initWithNibName:(NSString *)nibNameOrNil
 //                         bundle:(NSBundle *)nibBundleOrNil {
 //    

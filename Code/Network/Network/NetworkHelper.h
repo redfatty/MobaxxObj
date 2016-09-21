@@ -11,10 +11,20 @@
 
 @interface NetworkHelper : NSObject
 
-//解析protobuf原始数据
+/**
+ 解析protobuf数据
+
+ @param data 待解析的原始NSData数据
+
+ @return 解析好的protobuf数据
+ */
 + (GPBMessage *)parsePbOriginalData:(NSData *)data;
+
 
 //检测protobuf数据类型
 + (GPBMessage *)checkPbObj:(GPBMessage *)pbObj pbClass:(Class)pbClass;
+
++ (void)showLoading:(BOOL)loading;
++ (void)hiddenLoading:(BOOL)loading;
 
 @end
