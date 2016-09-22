@@ -18,6 +18,7 @@
 @interface LoginMainViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *accountTfd;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTfd;
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 
 @end
 
@@ -26,22 +27,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor grayColor];
     self.navigationController.navigationBarHidden = YES;
-    _accountTfd.text = @"+8613302431090";
-    _passwordTfd.text = @"123456";
+    
+    _accountTfd.text = @"+8613620946464";
+    _accountTfd.hidden = YES;
+    _passwordTfd.text = @"1234563721";
+    _passwordTfd.hidden = YES;
+//    _loginBtn.hidden = YES;
+    
 }
 - (IBAction)clickLoginBtn:(id)sender {
     __weak typeof(self) weakSelf = self;
     NSString *pwd = [_passwordTfd.text sha256String];
     [NetworkManager loginWithAccount:_accountTfd.text password:pwd completion:^(PResult *failResult, PLogin *plogin) {
         if (plogin) {
-           [NetworkHelper saveLoginData:plogin];
-            [self.navigationController popViewControllerAnimated:YES];
+            [NetworkHelper saveLoginData:plogin];
+            [weakSelf.navigationController popViewControllerAnimated:YES];
         }
     } error:^(NSError *err) {
         
     }];
 }
+
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//
+//}
 
 
 - (void)didReceiveMemoryWarning {

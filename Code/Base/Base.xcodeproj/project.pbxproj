@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6BE4FBF52C540758404803CE /* libPods-Base.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F97B8148C6543486CBF1C1F /* libPods-Base.a */; };
 		CE1C046F1D913C1D0077FAA7 /* Base.h in Headers */ = {isa = PBXBuildFile; fileRef = CE1C046D1D913C1D0077FAA7 /* Base.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE2E7DBE1D93F33400F8F24C /* MWUserInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = CE2E7DBC1D93F33400F8F24C /* MWUserInfo.h */; };
+		CE2E7DBF1D93F33400F8F24C /* MWUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2E7DBD1D93F33400F8F24C /* MWUserInfo.m */; };
 		CE94213D1D925BB9008A8736 /* PbHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = CE94213B1D925BB9008A8736 /* PbHelper.h */; };
 		CE94213E1D925BB9008A8736 /* PbHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CE94213C1D925BB9008A8736 /* PbHelper.m */; };
 		CEA1E80D1D9154E300D4CAED /* Account.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA1E7E71D9154E300D4CAED /* Account.pbobjc.h */; };
@@ -63,6 +65,8 @@
 		CE1C046A1D913C1D0077FAA7 /* Base.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Base.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1C046D1D913C1D0077FAA7 /* Base.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
 		CE1C046E1D913C1D0077FAA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE2E7DBC1D93F33400F8F24C /* MWUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWUserInfo.h; sourceTree = "<group>"; };
+		CE2E7DBD1D93F33400F8F24C /* MWUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWUserInfo.m; sourceTree = "<group>"; };
 		CE94213B1D925BB9008A8736 /* PbHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PbHelper.h; sourceTree = "<group>"; };
 		CE94213C1D925BB9008A8736 /* PbHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PbHelper.m; sourceTree = "<group>"; };
 		CEA1E7E71D9154E300D4CAED /* Account.pbobjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.pbobjc.h; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 				CE1C046D1D913C1D0077FAA7 /* Base.h */,
 				CE94213B1D925BB9008A8736 /* PbHelper.h */,
 				CE94213C1D925BB9008A8736 /* PbHelper.m */,
+				CE2E7DBC1D93F33400F8F24C /* MWUserInfo.h */,
+				CE2E7DBD1D93F33400F8F24C /* MWUserInfo.m */,
 				CEB1DE581D92AAB00014ADC7 /* CommonConst.h */,
 				CE1C046E1D913C1D0077FAA7 /* Info.plist */,
 				CEA1E8331D91597000D4CAED /* Controller */,
@@ -247,6 +253,7 @@
 				CEA1E8381D91597000D4CAED /* MWBaseViewController.h in Headers */,
 				CEA1E8171D9154E300D4CAED /* Datapublishing.pbobjc.h in Headers */,
 				CEA1E8271D9154E300D4CAED /* Payment.pbobjc.h in Headers */,
+				CE2E7DBE1D93F33400F8F24C /* MWUserInfo.h in Headers */,
 				CEA1E80F1D9154E300D4CAED /* Chat.pbobjc.h in Headers */,
 				CEA1E8291D9154E300D4CAED /* Platform.pbobjc.h in Headers */,
 				CEA1E8191D9154E300D4CAED /* Edge.pbobjc.h in Headers */,
@@ -374,6 +381,7 @@
 				CEA1E81A1D9154E300D4CAED /* Edge.pbobjc.m in Sources */,
 				CEA1E8391D91597000D4CAED /* MWBaseViewController.m in Sources */,
 				CEA1E8181D9154E300D4CAED /* Datapublishing.pbobjc.m in Sources */,
+				CE2E7DBF1D93F33400F8F24C /* MWUserInfo.m in Sources */,
 				CEA1E8321D9154E300D4CAED /* Wallet.pbobjc.m in Sources */,
 				CEA1E8161D9154E300D4CAED /* Contact.pbobjc.m in Sources */,
 				CEA1E82C1D9154E300D4CAED /* Result.pbobjc.m in Sources */,

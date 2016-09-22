@@ -29,6 +29,7 @@
     
     [NetworkHelper showLoading:loadingUI];
     
+    [self setupCookies];
     [[AFManager sharedManager] GET:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
         //进度
         if (progress) {
@@ -65,6 +66,7 @@
 
     [NetworkHelper showLoading:loadingUI];
     
+    [self setupCookies];
     if (configBody) {
         //一.有表单数据
         [[AFManager sharedManager] POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
@@ -129,6 +131,7 @@
     
     [NetworkHelper showLoading:loadingUI];
     
+    [self setupCookies];
     [[AFManager sharedManager] DELETE:url parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         [NetworkHelper hiddenLoading:loadingUI];
@@ -155,6 +158,7 @@
     
     [NetworkHelper showLoading:loadingUI];
     
+    [self setupCookies];
     [[AFManager sharedManager] PUT:url parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         [NetworkHelper hiddenLoading:loadingUI];

@@ -13,6 +13,7 @@
 @property (nonatomic, strong) PPostInfo *postInfo;
 //@property (nonatomic, assign) PostType type;
 @property (nonatomic, copy) NSString *pubTimeStr;
+@property (nonatomic, assign) CGFloat postHeight;
 
 + (instancetype)modelWithPostInfo:(PPostInfo *)postInfo;
 

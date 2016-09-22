@@ -19,8 +19,6 @@
 		CEA1E8D31D915E9100D4CAED /* Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA1E8D11D915E9100D4CAED /* Base.framework */; };
 		CEA1E8D41D915E9100D4CAED /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA1E8D21D915E9100D4CAED /* Network.framework */; };
 		CEB1DE5D1D92AC1A0014ADC7 /* PostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB1DE5C1D92AC1A0014ADC7 /* PostModel.m */; };
-		CEB1DEC01D92AEE00014ADC7 /* PostHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB1DEB31D92AEE00014ADC7 /* PostHeader.m */; };
-		CEB1DEC11D92AEE00014ADC7 /* PostFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB1DEB51D92AEE00014ADC7 /* PostFooter.m */; };
 		CEB1DEC21D92AEE00014ADC7 /* BasePostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB1DEB71D92AEE00014ADC7 /* BasePostCell.m */; };
 		CEB1DEC31D92AEE00014ADC7 /* TextPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB1DEB91D92AEE00014ADC7 /* TextPostCell.m */; };
 		CEB1DEC41D92AEE00014ADC7 /* ImgPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB1DEBB1D92AEE00014ADC7 /* ImgPostCell.m */; };
@@ -66,10 +64,6 @@
 		CEB1DE5A1D92AB910014ADC7 /* MobaxxPch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobaxxPch.pch; sourceTree = "<group>"; };
 		CEB1DE5B1D92AC1A0014ADC7 /* PostModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostModel.h; sourceTree = "<group>"; };
 		CEB1DE5C1D92AC1A0014ADC7 /* PostModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostModel.m; sourceTree = "<group>"; };
-		CEB1DEB21D92AEE00014ADC7 /* PostHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostHeader.h; sourceTree = "<group>"; };
-		CEB1DEB31D92AEE00014ADC7 /* PostHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostHeader.m; sourceTree = "<group>"; };
-		CEB1DEB41D92AEE00014ADC7 /* PostFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostFooter.h; sourceTree = "<group>"; };
-		CEB1DEB51D92AEE00014ADC7 /* PostFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostFooter.m; sourceTree = "<group>"; };
 		CEB1DEB61D92AEE00014ADC7 /* BasePostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasePostCell.h; sourceTree = "<group>"; };
 		CEB1DEB71D92AEE00014ADC7 /* BasePostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasePostCell.m; sourceTree = "<group>"; };
 		CEB1DEB81D92AEE00014ADC7 /* TextPostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextPostCell.h; sourceTree = "<group>"; };
@@ -196,10 +190,6 @@
 		CEA1E8C51D915DDB00D4CAED /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				CEB1DEB21D92AEE00014ADC7 /* PostHeader.h */,
-				CEB1DEB31D92AEE00014ADC7 /* PostHeader.m */,
-				CEB1DEB41D92AEE00014ADC7 /* PostFooter.h */,
-				CEB1DEB51D92AEE00014ADC7 /* PostFooter.m */,
 				CEB1DEB61D92AEE00014ADC7 /* BasePostCell.h */,
 				CEB1DEB71D92AEE00014ADC7 /* BasePostCell.m */,
 				CEB1DEB81D92AEE00014ADC7 /* TextPostCell.h */,
@@ -406,14 +396,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEB1DEC01D92AEE00014ADC7 /* PostHeader.m in Sources */,
 				CEA1E8CF1D915DDB00D4CAED /* WeiboMainViewController.m in Sources */,
 				CEB1DEC51D92AEE00014ADC7 /* AudioPostCell.m in Sources */,
 				CEE9FC071D9260EA00DCB604 /* PostListView.m in Sources */,
 				CEB1DEC41D92AEE00014ADC7 /* ImgPostCell.m in Sources */,
 				CEA1E8941D915D2A00D4CAED /* AppDelegate.m in Sources */,
 				CEB1DEC31D92AEE00014ADC7 /* TextPostCell.m in Sources */,
-				CEB1DEC11D92AEE00014ADC7 /* PostFooter.m in Sources */,
 				CEB1DEC61D92AEE00014ADC7 /* VideoPostCell.m in Sources */,
 				CEB1DEC21D92AEE00014ADC7 /* BasePostCell.m in Sources */,
 				CEA1E8D01D915DDB00D4CAED /* WeiboPubViewController.m in Sources */,

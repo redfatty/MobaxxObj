@@ -9,6 +9,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginMainViewController">
             <connections>
                 <outlet property="accountTfd" destination="Evw-6Q-SeE" id="tmo-P7-xww"/>
+                <outlet property="loginBtn" destination="qMH-AD-CjS" id="TK4-u5-swM"/>
                 <outlet property="passwordTfd" destination="kWB-8U-fJU" id="syP-d3-Uus"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -33,9 +34,9 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMH-AD-CjS">
-                    <frame key="frameInset" minX="16" minY="228" width="64" height="35"/>
+                    <frame key="frameInset" minX="16" minY="228" width="120" height="60"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
+                    <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <action selector="clickLoginBtn:" destination="-1" eventType="touchUpInside" id="8rl-fg-a9Y"/>
                     </connections>

@@ -9,8 +9,6 @@
 #import "BasePostCell.h"
 
 @interface BasePostCell ()
-@property (nonatomic, weak) UIView *postHeader;
-@property (nonatomic, weak) UIView *postFooter;
 @end
 
 @implementation BasePostCell
@@ -67,6 +65,13 @@
 //    [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
 //        make.edges.equalTo(self.contentView).insets(UIEdgeInsetsMake(-8, -5, -8, -5));
 //    }];
+    
+    [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(@(12));
+        make.bottom.equalTo(@(-12));
+        make.left.equalTo(@(15));
+        make.right.equalTo(@(-15));
+    }];
     
     
     /*********************************************/
@@ -135,6 +140,15 @@
 
 
 #pragma mark - 属性懒加载:
+- (UIView *)postContent {
+    if (_postContent == nil) {
+        UIView *postContent = [[UIView alloc] init];
+        [self.contentView addSubview:postContent];
+        _postContent = postContent;
+    }
+    return _postContent;
+}
+
 #pragma mark -头部信息
 - (UIView *)postHeader {
     if (_postHeader == nil) {
@@ -149,7 +163,7 @@
 - (UIButton *)headerIcon {
     if (_headerIcon == nil) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-//        [btn setBackgroundImage:BaseImage(@"user_default_headerIcon") forState:UIControlStateNormal];
+        [btn setBackgroundImage:[UIImage imageNamed:@"user_default_headerIcon"] forState:UIControlStateNormal];
         [self.postHeader addSubview:btn];
         _headerIcon = btn;
     }
@@ -162,7 +176,7 @@
         UILabel *label = [[UILabel alloc] init];
         label.text = @"暂无呢称";
         label.font = [UIFont systemFontOfSize:14];
-//        label.textColor = AllBlueTextColor;
+        label.textColor = [UIColor blueColor];
         [self.postHeader addSubview:label];
         _nicknameLabel = label;
     }
@@ -171,9 +185,9 @@
 
 - (UIImageView *)postTypeIcon {
     if (_postTypeIcon == nil) {
-//        UIImageView *imgView = [[UIImageView alloc] initWithImage:WBImage(@"note_type_audio")];
-//        [self.postHeader addSubview:imgView];
-//        _postTypeIcon = imgView;
+        UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_text"]];
+        [self.postHeader addSubview:imgView];
+        _postTypeIcon = imgView;
     }
     return _postTypeIcon;
 }
@@ -181,7 +195,7 @@
 - (UIButton *)pubLocation {
     if (_pubLocation == nil) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-//        [btn setImage:WBImage(@"note_pub_tool_loc") forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:@"icon_address"] forState:UIControlStateNormal];
         [btn setTitle:@"暂无位置" forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         btn.titleLabel.font = [UIFont systemFontOfSize:12];
@@ -204,6 +218,7 @@
     return _pubTimeLabel;
 }
 
+
  #pragma mark -底部
 - (UIView *)postFooter {
     if (_postFooter == nil) {
@@ -219,7 +234,7 @@
     if (_commentBtn == nil) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         [btn setTitle:@"评论" forState:UIControlStateNormal];
-        [btn setImage:[UIImage imageNamed:@"note_comment"] forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:@"icon_comment"] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
          btn.titleLabel.font = [UIFont systemFontOfSize:14];
         [self.postFooter addSubview:btn];
@@ -234,7 +249,7 @@
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         [btn setTitle:@" " forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-        [btn setImage:[UIImage imageNamed:@"LikeIconN"] forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:@"icon_good"] forState:UIControlStateNormal];
         btn.titleLabel.font = [UIFont systemFontOfSize:14];
         [self.postFooter addSubview:btn];
         _dianZanBtn = btn;
@@ -248,7 +263,7 @@
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         [btn setTitle:@"更多" forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-        [btn setImage:[UIImage imageNamed:@"note_more"] forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:@"icon_more"] forState:UIControlStateNormal];
         btn.titleLabel.font = [UIFont systemFontOfSize:14];
         [self.postFooter addSubview:btn];
         _moreOptionBtn = btn;
