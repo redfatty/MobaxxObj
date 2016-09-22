@@ -9,6 +9,7 @@
 #import "MainTabBarController.h"
 #import <MWNavigationController.h>
 #import "WeiboMainViewController.h"
+#import "LoginMainViewController.h"
 
 
 @interface MainTabBarController ()
@@ -22,8 +23,9 @@
     // Do any additional setup after loading the view.
     
     WeiboMainViewController *weiboMainVC = [WeiboMainViewController loadFromXib:nil bundle:nil];
+    MWNavigationController *weiboMainNav = [MWNavigationController createWithRootVC:weiboMainVC];
     
-    [self addChildViewController:[MWNavigationController createWithRootVC:weiboMainVC]];
+    [self addChildViewController:weiboMainNav];
 }
 
 - (void)didReceiveMemoryWarning {

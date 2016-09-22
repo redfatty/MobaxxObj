@@ -17,14 +17,14 @@
 
 + (void)get:(NSString *)url
   loadingUI:(BOOL)loadingUI
-     params:(NSDictionary *)params
+     params:(id)params
    progress:(ProgressBlock)progress
     success:(GpbBlock)success
     failure:(ErrorBlock)failure;
 
 + (void)post:(NSString *)url
    loadingUI:(BOOL)loadingUI
-      params:(NSDictionary *)params
+      params:(id)params
   configBody:(ConfigBodyBlock)configBody
     progress:(ProgressBlock)progress
      success:(GpbBlock)success
@@ -32,8 +32,14 @@
 
 + (void)delette:(NSString *)url
       loadingUI:(BOOL)loadingUI
-         params:(NSDictionary *)params
+         params:(id)params
         success:(GpbBlock)success
         failure:(ErrorBlock)failure;
+
++ (void)put:(NSString *)url
+  loadingUI:(BOOL)loadingUI
+     params:(id)params
+    success:(GpbBlock)success
+    failure:(ErrorBlock)failure;
 
 @end

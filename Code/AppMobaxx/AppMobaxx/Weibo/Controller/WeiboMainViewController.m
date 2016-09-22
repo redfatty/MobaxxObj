@@ -22,45 +22,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     self.title = @"最新消息";
-    
-    //获取帖子列表数据
-    [self requestPostListData];
-    [self gotoLogin];
+
+    [NetworkManager autoLoginWithCompletion:^(PResult *failResult, PLogin *plogin) {
+        if (plogin) {
+           [NetworkHelper saveLoginData:plogin];
+           [self requestPostListData];
+        } else {
+            [self gotoLogin];
+        }
+    } error:^(NSError *err) {
+        [self gotoLogin];
+    }];
+}
+
+- (void)gotoLogin {
+    LoginMainViewController *loginMainVC = [LoginMainViewController loadFromXib:nil bundle:nil];
+    [self.navigationController pushViewController:loginMainVC animated:YES];
 }
 
 - (void)requestPostListData {
     
-}
-
-- (void)gotoLogin {
-
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
-    LoginMainViewController *loginMainVC = [LoginMainViewController loadFromXib:nil bundle:nil];
-    [self.navigationController pushViewController:loginMainVC animated:YES];
-    
-//    NSString *pwd = [@"1234563721" sha256String];
-//    
-//    [NetworkManager loginWithAccount:@"+8613620946464"
-//                            password:pwd
-//                          completion:^(PResult *failResult,
-//                                       PLogin *plogin) {
-//                              
-//        
-//    } error:^(NSError *err) {
-//        
-//    }];
-    
-//    NSLog(@"点击了");
-//    [NetworkManager requestSmsCodeWithPhone:@"+8613620946464" type:2 completion:^(PResult *presult) {
-//        
-//    } error:^(NSError *err) {
-//        
-//    }];
 }
 
 - (PostListView *)postListView {
@@ -93,3 +75,6 @@
 */
 
 @end
+
+
+

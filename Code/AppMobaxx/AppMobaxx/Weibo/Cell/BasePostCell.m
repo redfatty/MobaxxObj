@@ -27,6 +27,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    [super awakeFromNib];
 }
 
 - (void)refreshWithPostModel:(PostModel *)model {
@@ -161,7 +162,7 @@
         UILabel *label = [[UILabel alloc] init];
         label.text = @"暂无呢称";
         label.font = [UIFont systemFontOfSize:14];
-        label.textColor = AllBlueTextColor;
+//        label.textColor = AllBlueTextColor;
         [self.postHeader addSubview:label];
         _nicknameLabel = label;
     }
@@ -170,9 +171,9 @@
 
 - (UIImageView *)postTypeIcon {
     if (_postTypeIcon == nil) {
-        UIImageView *imgView = [[UIImageView alloc] initWithImage:WBImage(@"note_type_audio")];
-        [self.postHeader addSubview:imgView];
-        _postTypeIcon = imgView;
+//        UIImageView *imgView = [[UIImageView alloc] initWithImage:WBImage(@"note_type_audio")];
+//        [self.postHeader addSubview:imgView];
+//        _postTypeIcon = imgView;
     }
     return _postTypeIcon;
 }
@@ -180,7 +181,7 @@
 - (UIButton *)pubLocation {
     if (_pubLocation == nil) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [btn setImage:WBImage(@"note_pub_tool_loc") forState:UIControlStateNormal];
+//        [btn setImage:WBImage(@"note_pub_tool_loc") forState:UIControlStateNormal];
         [btn setTitle:@"暂无位置" forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         btn.titleLabel.font = [UIFont systemFontOfSize:12];

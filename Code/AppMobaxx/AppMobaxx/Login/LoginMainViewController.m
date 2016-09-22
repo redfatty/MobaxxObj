@@ -7,6 +7,7 @@
 //
 
 #import "LoginMainViewController.h"
+#import "WeiboMainViewController.h"
 #import <NetworkManager+Login.h>
 #import <Login.pbobjc.h>
 #import <AFManager.h>
@@ -25,42 +26,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationController.navigationBarHidden = YES;
     _accountTfd.text = @"+8613302431090";
     _passwordTfd.text = @"123456";
 }
 - (IBAction)clickLoginBtn:(id)sender {
-    
     __weak typeof(self) weakSelf = self;
     NSString *pwd = [_passwordTfd.text sha256String];
     [NetworkManager loginWithAccount:_accountTfd.text password:pwd completion:^(PResult *failResult, PLogin *plogin) {
-        
-        [weakSelf handlePLogin:plogin];
-        
+        if (plogin) {
+           [NetworkHelper saveLoginData:plogin];
+            [self.navigationController popViewControllerAnimated:YES];
+        }
     } error:^(NSError *err) {
         
     }];
 }
 
-- (void)handlePLogin:(PLogin *)plogin {
-    NSString *uuid = plogin.uuid;
-    NSString *token = plogin.token;
-    NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
-    [userDef setObject:uuid forKey:@"uuid"];
-    [userDef setObject:token forKey:@"token"];
-    [userDef synchronize];
-    NSString *cookies = [NSString stringWithFormat:@"token=%@;uuid=%@;", token, uuid];
-    [[AFManager sharedManager].requestSerializer setValue:cookies forHTTPHeaderField:@"Cookie"];
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
-    [NetworkManager requestRecommendPostListWithCompletion:^(PResult *failResult, PPostInfoList *postList) {
-        
-    } error:^(NSError *err) {
-        
-    }];
-    
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

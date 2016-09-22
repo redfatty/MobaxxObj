@@ -22,7 +22,7 @@
 #pragma mark - get
 + (void)get:(NSString *)url
   loadingUI:(BOOL)loadingUI
-     params:(NSDictionary *)params
+     params:(id)params
    progress:(ProgressBlock)progress
     success:(GpbBlock)success
     failure:(ErrorBlock)failure {
@@ -57,7 +57,7 @@
 
 + (void)post:(NSString *)url
    loadingUI:(BOOL)loadingUI
-      params:(NSDictionary *)params
+      params:(id)params
   configBody:(ConfigBodyBlock)configBody
     progress:(ProgressBlock)progress
      success:(GpbBlock)success
@@ -123,13 +123,39 @@
 
 + (void)delette:(NSString *)url
       loadingUI:(BOOL)loadingUI
-         params:(NSDictionary *)params
+         params:(id)params
         success:(GpbBlock)success
         failure:(ErrorBlock)failure {
     
     [NetworkHelper showLoading:loadingUI];
     
     [[AFManager sharedManager] DELETE:url parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        [NetworkHelper hiddenLoading:loadingUI];
+        
+        if (success) {
+            GPBMessage *pbObj = [PbHelper parsePbOriginalData:responseObject];
+            success(pbObj);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        [NetworkHelper hiddenLoading:loadingUI];
+        
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+
++ (void)put:(NSString *)url
+  loadingUI:(BOOL)loadingUI
+     params:(id)params
+    success:(GpbBlock)success
+    failure:(ErrorBlock)failure {
+    
+    [NetworkHelper showLoading:loadingUI];
+    
+    [[AFManager sharedManager] PUT:url parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         [NetworkHelper hiddenLoading:loadingUI];
         

@@ -20,4 +20,9 @@
               completion:(LoginBlock)completion
                    error:(ErrorBlock)error;
 
++ (void)autoLoginWithCompletion:(LoginBlock)completion
+                          error:(ErrorBlock)error;
+
+
+
 @end

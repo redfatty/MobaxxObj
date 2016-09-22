@@ -32,8 +32,11 @@
         }
         PResult *presult = [PbHelper checkPbObj:pbObj expectClass:PResult.class];
         completion(presult);
-    } failure:^(NSError *err) {
+    } failure:^(NSError *errObj) {
         
+        if (error) {
+            error(errObj);
+        }
     }];
 }
 
@@ -60,9 +63,31 @@
         PResult *failResult = [PbHelper checkPbObj:pbObj expectClass:PResult.class];
         PLogin *plogin = [PbHelper checkPbObj:pbObj expectClass:PLogin.class];
         completion(failResult ,plogin);
-    } failure:^(NSError *err) {
+    } failure:^(NSError *errObj) {
         
+        if (error) {
+            error(errObj);
+        }
     }];
+}
+
++ (void)autoLoginWithCompletion:(LoginBlock)completion error:(ErrorBlock)error {
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"appid"] = @"bbef2ab2b5d07b5583";//
+    params[@"version"] = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+    
+    [self put:URL_Auto_Login loadingUI:NO params:params success:^(GPBMessage *pbObj) {
+        
+        PResult *failResult = [PbHelper checkPbObj:pbObj expectClass:PResult.class];
+        PLogin *plogin = [PbHelper checkPbObj:pbObj expectClass:PLogin.class];
+        completion(failResult, plogin);
+    } failure:^(NSError *errObj) {
+        if (error) {
+            error(errObj);
+        }
+    }];
+    
+    
 }
 
 @end

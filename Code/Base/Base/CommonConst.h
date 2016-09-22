@@ -9,12 +9,12 @@
 #ifndef CommonConst_h
 #define CommonConst_h
 
-typedef NS_ENUM(NSInteger, PostType) {
-    PostTypeText,
-    PostTypeImage,
-    PostTypeAudio,
-    PostTypeVideo
-};
+//typedef NS_ENUM(NSInteger, PostType) {
+//    PostTypeText = 0,
+//    PostTypeImage,
+//    PostTypeAudio,
+//    PostTypeVideo
+//};
 
 
 #endif /* CommonConst_h */

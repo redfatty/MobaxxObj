@@ -67,7 +67,7 @@
 - (UIButton *)headerIcon {
     if (_headerIcon == nil) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [btn setBackgroundImage:BaseImage(@"user_default_headerIcon") forState:UIControlStateNormal];
+//        [btn setBackgroundImage:BaseImage(@"user_default_headerIcon") forState:UIControlStateNormal];
         [self addSubview:btn];
         _headerIcon = btn;
     }
@@ -89,9 +89,9 @@
 
 - (UIImageView *)postTypeIcon {
     if (_postTypeIcon == nil) {
-        UIImageView *imgView = [[UIImageView alloc] initWithImage:WBImage(@"")];
-        [self addSubview:imgView];
-        _postTypeIcon = imgView;
+//        UIImageView *imgView = [[UIImageView alloc] initWithImage:WBImage(@"")];
+//        [self addSubview:imgView];
+//        _postTypeIcon = imgView;
     }
     return _postTypeIcon;
 }
@@ -99,7 +99,7 @@
 - (UIButton *)pubLocation {
     if (_pubLocation == nil) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [btn setImage:WBImage(@"") forState:UIControlStateNormal];
+//        [btn setImage:WBImage(@"") forState:UIControlStateNormal];
         [btn setTitle:@"暂无位置" forState:UIControlStateNormal];
         [self addSubview:btn];
         _pubLocation = btn;

@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+@class PLogin;
 
 @interface NetworkHelper : NSObject
 
 + (void)showLoading:(BOOL)loading;
 + (void)hiddenLoading:(BOOL)loading;
+
++ (void)saveLoginData:(PLogin *)loginData;
 
 @end
